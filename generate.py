@@ -417,16 +417,18 @@ def project_page(project):
 
     partner_rows = ""
     for position, p in enumerate(partners, start=1):
+        avatar = f'<img src="{p["photo"]}" alt="{p["name"]}" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">' if p.get("photo") else ''.join(w[0] for w in p['name'].split()[:2])
         partner_rows += f"""
         <div class="partner-row">
-          <div class="logo">{''.join(w[0] for w in p['name'].split()[:2])}</div>
+          <div class="logo">{avatar}</div>
           <div class="info">
-            <div class="n">#{position} {p['name']} <span class="badge-rera" style="margin-left:4px;">RERA ✓</span></div>
+            <div class="n">#{position} <a href="partner.html?id={p['id']}" class="entity-name-link">{p['name']}</a> <span class="badge-rera" style="margin-left:4px;">RERA ✓</span></div>
             <div class="b">{fmt_inr(p['bidAmount'])}/{p['bidCycle']} · on this project since {fmt_date(p['since'])}</div>
           </div>
         </div>
-        <div class="call-strip">
-          <a class="btn btn-call btn-sm btn-block" href="tel:{p['phone'].replace(' ', '')}">Call {p['name'].split()[0]}</a>
+        <div class="call-strip" style="display:flex; gap:8px;">
+          <a class="btn btn-outline btn-sm" href="partner.html?id={p['id']}" style="flex:1; justify-content:center;">Profile</a>
+          <a class="btn btn-call btn-sm" href="tel:{p['phone'].replace(' ', '')}" style="flex:1; justify-content:center;">Call {p['name'].split()[0]}</a>
         </div>
         """
 

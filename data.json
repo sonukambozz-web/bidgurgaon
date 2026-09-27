@@ -287,6 +287,47 @@
   "channelPartners": [
     {
       "rank": 1,
+      "id": "spy-realtors",
+      "name": "SPY Realtors",
+      "bidAmount": 250000,
+      "bidCycle": "month",
+      "since": "2024-01-01",
+      "phone": "+91 98765 43210",
+      "whatsapp": "+91 98765 43210",
+      "email": "satveer@spyrealtors.in",
+      "website": "https://spyrealtors.in",
+      "reraChannel": "HRERA-PKL-GGM-1288-2024",
+      "activeOn": [
+        "the-grove-at-sanctuary",
+        "birla-arika-phase-2",
+        "m3m-soulitude-central",
+        "suncity-monarch-residences",
+        "bptp-green-oaks-boulevard",
+        "tonino-lamborghini-residences",
+        "dlf-privana-enclave",
+        "ats-triumph-villas",
+        "aquaria-at-aipl-lake-city",
+        "m3m-capital-financial-centre",
+        "krisumi-city-phase-7",
+        "the-marq",
+        "puri-aerosphere",
+        "the-estate-one",
+        "marbella-terraces",
+        "sobha-crescent-phase-1",
+        "godrej-verano",
+        "three-sixty-north",
+        "godrej-samaris",
+        "lodha-golf-course-road"
+      ],
+      "experienceYears": 8,
+      "photo": "https://spyrealtors.in/favicon.svg",
+      "tagline": "Reality. Reliability. Results. — Global NRI Investment Specialists",
+      "specialization": "NRI Property Advisory, Luxury Pre-Launches 2026, FEMA Compliance, Remote Transactions",
+      "languages": "English, Hindi, Punjabi",
+      "bio": "SPY Realtors is Gurugram's trusted NRI real estate consultancy and advisory firm, specialising in premium residential & commercial developments across Delhi NCR, Dubai, and Australia. With end-to-end remote transaction management, FEMA compliance, and direct developer allocations for 2026 luxury launches, SPY Realtors serves NRI and domestic investors across 12+ countries."
+    },
+    {
+      "rank": 2,
       "id": "skyline-partners",
       "name": "Skyline Realty Partners",
       "bidAmount": 165000,
@@ -308,7 +349,7 @@
       "bio": "Skyline Realty Partners has closed over 300 transactions across Gurugram's premium micro-markets since 2016, with a focus on Golf Course Road Extension and Dwarka Expressway. The team works directly with a small set of RERA-certified developers rather than spreading thin across the market, so buyers get deep, current knowledge of each project's construction stage, inventory and pricing movement."
     },
     {
-      "rank": 2,
+      "rank": 3,
       "id": "northstar-advisors",
       "name": "NorthStar Property Advisors",
       "bidAmount": 142000,
@@ -329,7 +370,7 @@
       "bio": "NorthStar Property Advisors focuses on first-time and end-user buyers looking in Sohna Road and New Gurugram — helping compare configurations, possession timelines and home-loan eligibility across a handful of actively tracked projects, rather than pushing whichever project pays the highest commission."
     },
     {
-      "rank": 3,
+      "rank": 4,
       "id": "capital-square",
       "name": "Capital Square Realtors",
       "bidAmount": 118000,
@@ -350,7 +391,7 @@
       "bio": "Capital Square Realtors has advised on real estate investment in Gurugram since 2013, with particular depth in NRI transactions and portfolio-style multi-unit purchases. Every project represented has been personally site-visited by the team before being added to their active list."
     },
     {
-      "rank": 4,
+      "rank": 5,
       "id": "primehome-consultants",
       "name": "PrimeHome Consultants",
       "bidAmount": 96000,
@@ -370,7 +411,7 @@
       "bio": "PrimeHome Consultants tracks new launches on Dwarka Expressway closely, often meeting buyers on-site during the pre-launch and early booking window when floor selection and payment plans are most flexible."
     },
     {
-      "rank": 5,
+      "rank": 6,
       "id": "urban-nest",
       "name": "Urban Nest Advisory",
       "bidAmount": 74000,
@@ -416,7 +457,9 @@
         "1000+ Native Trees",
         "Stilt + 4 Gated Community"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "birla-arika-phase-2",
@@ -442,7 +485,9 @@
         "Birla Legacy & Quality",
         "Near HUDA City Centre"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "m3m-soulitude-central",
@@ -468,7 +513,9 @@
         "Private Basement Office",
         "Terrace Garden Access"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "suncity-monarch-residences",
@@ -494,7 +541,9 @@
         "NH-48 Immediate Exit",
         "Sky Lounge & Observatory"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "bptp-green-oaks-boulevard",
@@ -520,7 +569,9 @@
         "Ready Social Infrastructure",
         "High Rental Liquidity"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "tonino-lamborghini-residences",
@@ -546,7 +597,9 @@
         "SPR Expressway Hub",
         "Curated Lamborghini Interiors"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "dlf-privana-enclave",
@@ -572,7 +625,9 @@
         "Aravalli Forest Frontage",
         "Pre-Launch Allocation"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "ats-triumph-villas",
@@ -598,7 +653,9 @@
         "Italian Marble Flooring",
         "Private Lawn & Plunge Pool"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "aquaria-at-aipl-lake-city",
@@ -624,7 +681,9 @@
         "Floating Boardwalks",
         "Expressway Corridor Access"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "m3m-capital-financial-centre",
@@ -650,7 +709,9 @@
         "Diplomatic Enclave II Frontage",
         "Grade-A Retail & Workspaces"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "krisumi-city-phase-7",
@@ -676,7 +737,9 @@
         "Nikken Sekkei Architecture",
         "Direct CPR Junction"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "the-marq",
@@ -702,7 +765,9 @@
         "AI Home Automation",
         "Central Park Proximity"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "puri-aerosphere",
@@ -728,7 +793,9 @@
         "Direct IGI Airport Tunnel",
         "7-Star Clubhouse"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "the-estate-one",
@@ -754,7 +821,9 @@
         "Elevated Green Canopy",
         "Private Gated Boulevard"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "marbella-terraces",
@@ -780,7 +849,9 @@
         "Private Plunge Pools",
         "Direct Metro Access"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "sobha-crescent-phase-1",
@@ -806,7 +877,9 @@
         "German Architectural Finishes",
         "Low Density Layout"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "godrej-verano",
@@ -832,7 +905,9 @@
         "Forest Trail Themed",
         "IGBC Platinum Rated"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "three-sixty-north",
@@ -858,7 +933,9 @@
         "Aravalli Ridge Views",
         "Double Height Balconies"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "godrej-samaris",
@@ -884,7 +961,9 @@
         "Thermal Infinity Pool",
         "Zero Surface Traffic"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     },
     {
       "id": "lodha-golf-course-road",
@@ -910,7 +989,9 @@
         "Private Sky Deck",
         "Saint Amand Hospitality"
       ],
-      "activePartners": []
+      "activePartners": [
+        "spy-realtors"
+      ]
     }
   ]
 }
