@@ -35,14 +35,17 @@
 <meta name="twitter:title" content="Bid Now — Take the #1 Position | Bid Gurgaon">
 <meta name="twitter:description" content="Pay the exact amount needed to take the #1 position on the Bid Gurgaon leaderboard — computed live from the current top bid.">
 <meta name="twitter:image" content="https://bidgurgaon.in/img/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 <style>
   #pay-summary .field{margin-bottom:4px;}
-  #pay-summary .field label{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel);margin-bottom:8px;}
-  #pay-bid-input{width:100%;background:#fff;border:1px solid var(--line-bright);border-radius:var(--radius-sm);padding:13px 16px;color:var(--paper);font-family:var(--sans);font-size:19px;font-weight:700;transition:border-color .2s ease, box-shadow .2s ease;}
-  #pay-bid-input:focus{outline:none;border-color:var(--brass-bright);box-shadow:0 0 0 3px rgba(232,103,74,.15);}
+  #pay-summary .field label{display:block;font-family:var(--font-body);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel);margin-bottom:8px;font-weight:700;}
+  #pay-bid-input{width:100%;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 16px;color:var(--paper);font-family:var(--font-display);font-size:20px;font-weight:800;transition:border-color .2s ease, box-shadow .2s ease;}
+  #pay-bid-input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.18);}
   #pay-summary .hint{font-size:12.5px;color:var(--steel);margin-top:8px;line-height:1.5;}
-  #pay-summary .form-error{display:none;background:rgba(240,120,126,.1);border:1px solid rgba(240,120,126,.4);color:var(--rose);border-radius:var(--radius-sm);padding:9px 13px;font-size:13px;margin-top:8px;}
+  #pay-summary .form-error{display:none;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.3);color:var(--rose);border-radius:8px;padding:9px 13px;font-size:13px;margin-top:8px;font-weight:600;}
   #pay-summary .form-error.show{display:block;}
   .pay-methods.disabled{opacity:.5;pointer-events:none;filter:grayscale(.3);}
 </style>
@@ -138,6 +141,37 @@
 
 <footer>
   <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <a href="../index.html"><img src="../img/logo-full.png" alt="Bid Gurgaon" class="brand-logo" style="height:28px; width:auto; margin-bottom:12px;"></a>
+        <p>Gurugram's transparent real estate leaderboard. RERA-certified developers and active channel partners ranked strictly by visibility bid.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Leaderboards</h4>
+        <ul>
+          <li><a href="developers.html">Developer Board</a></li>
+          <li><a href="channel-partners.html">Channel Partners</a></li>
+          <li><a href="projects.html">Verified Projects</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>For Real Estate</h4>
+        <ul>
+          <li><a href="for-developers.html">List Your Project</a></li>
+          <li><a href="for-partners.html">Join as Channel Partner</a></li>
+          <li><a href="bid-now.html?type=developer">Bid for Position</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Active Partner</h4>
+        <ul>
+          <li><a href="partner-spy-realtors">SPY Realtors</a></li>
+          <li><a href="tel:+917669766992">+91 76697 66992</a></li>
+          <li><span style="color:var(--muted); font-size:13.5px;">HRERA Registered</span></li>
+        </ul>
+      </div>
+    </div>
     <div class="foot-bottom">
       <span data-cms="footerNote">© 2026 Bid Gurgaon.</span>
       <span>Gurugram, Haryana</span>
