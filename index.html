@@ -447,37 +447,38 @@ footer .brand-logo{height:26px}
 .section-intro p{color:var(--muted);font-size:15.5px}
 
 /* ---- Project grid ---- */
-.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.proj{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);
-  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.18s}
-.proj:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(232,103,74,.14);border-color:var(--card-border)}
-.proj-media{position:relative;height:150px;display:flex;gap:3px;background:#EADFD8;overflow:hidden}
-.proj-status{position:absolute;top:10px;left:10px;z-index:2;background:var(--coral);color:#fff;font-size:11px;
-  font-weight:700;border-radius:999px;padding:3px 10px}
-.proj-rera{position:absolute;top:10px;right:10px;z-index:2;background:#fff;color:var(--green);font-size:10.5px;
-  font-weight:800;border:1px solid rgba(47,174,96,.35);border-radius:999px;padding:2px 8px}
-.proj-shot{display:block;min-width:0;min-height:0}
-img.proj-shot{object-fit:cover}
-.proj-shot--main{flex:1.75;height:100%;width:100%}
-.proj-thumbs{flex:1;display:flex;flex-direction:column;gap:3px;height:100%;min-width:0}
-.proj-shot--thumb{flex:1;width:100%}
-.proj-shot--ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:var(--coral-dark);
-  background:radial-gradient(circle at 28% 24%,rgba(232,103,74,.20),transparent 62%),
-    radial-gradient(circle at 78% 82%,rgba(247,183,51,.18),transparent 62%),linear-gradient(135deg,#fff,#FBE9E2)}
-.proj-shot--ph .ph-ico{width:24px;height:24px;opacity:.5}
-.proj-shot--main.proj-shot--ph .ph-ico{width:30px;height:30px}
-.proj-shot--thumb.proj-shot--ph .ph-ico{width:16px;height:16px}
-.proj-shot--ph .ph-label{font-weight:800;font-size:13px;line-height:1.2;color:var(--ink);text-align:center;padding:0 12px}
-.proj-shot--thumb .ph-label{display:none}
-.proj-body{padding:15px 16px;display:flex;flex-direction:column;gap:5px;flex:1}
-.proj-dev{font-size:12.5px;color:var(--muted);font-weight:600}
-.proj-body h3{font-size:16px;font-weight:800;letter-spacing:-.01em}
-.proj-loc{font-size:13px;color:#5c5e66}
-.proj-specs{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#4a4c54;margin-top:2px}
-.proj-specs b{color:var(--ink)}
-.proj-foot{margin-top:auto;padding-top:12px;display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
-.proj-price{font-weight:800;color:var(--coral);font-size:15px}
-.proj-price small{display:block;color:var(--muted);font-weight:500;font-size:11px}
+/* ---- Project grid (Spy Realtors Luxury Visual Style) ---- */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media (max-width:980px){.proj-grid{grid-template-columns:repeat(2,1fr);gap:18px}}
+@media (max-width:640px){.proj-grid{grid-template-columns:1fr;gap:16px}}
+.proj{display:flex;flex-direction:column;background:#fff;border:1px solid rgba(91,33,182,0.12);
+  border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.06);
+  transition:transform .38s cubic-bezier(.22,1,.36,1),box-shadow .38s,border-color .3s;text-decoration:none;color:inherit}
+.proj:hover{transform:translateY(-8px);box-shadow:0 28px 60px -12px rgba(91,33,182,0.18);border-color:rgba(91,33,182,0.35)}
+.proj-media{position:relative;height:210px;display:flex;background:linear-gradient(135deg,#1e293b,#0f172a);overflow:hidden}
+.proj-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.proj:hover .proj-media img{transform:scale(1.07)}
+.proj-status{position:absolute;top:12px;left:12px;z-index:2;background:rgba(15,23,42,.80);color:#fff;font-size:10.5px;
+  font-weight:600;border-radius:999px;padding:4px 11px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.22);box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.proj-rera{position:absolute;top:12px;right:12px;z-index:2;background:linear-gradient(135deg,#10b981,#059669);color:#fff;
+  font-size:10.5px;font-weight:700;border-radius:999px;padding:4px 11px;box-shadow:0 4px 14px rgba(16,185,129,.35);border:1px solid rgba(255,255,255,.25)}
+.proj-shot{display:block;width:100%;height:100%}
+.proj-shot--ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#94a3b8;
+  background:linear-gradient(135deg,#1e293b,#334155)}
+.proj-shot--ph .ph-ico{width:30px;height:30px;opacity:.6;stroke:#94a3b8}
+.proj-shot--ph .ph-label{font-weight:600;font-size:13px;color:#f8fafc;text-align:center;padding:0 14px}
+.proj-body{padding:20px 18px 16px;display:flex;flex-direction:column;flex:1;background:#fff}
+.proj-dev{font-size:11px;color:#6366f1;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.proj-body h3{font-size:18px;font-weight:700;color:#0f172a;margin:2px 0 6px;line-height:1.3}
+.proj-loc{font-size:13px;color:#64748b;margin-bottom:10px}
+.proj-specs{display:flex;gap:8px;flex-wrap:wrap;font-size:11.5px;color:#475569;margin-bottom:12px}
+.proj-specs span{background:#f8fafc;border:1px solid #e2e8f0;padding:3px 8px;border-radius:6px;display:inline-flex;align-items:center;gap:4px}
+.proj-specs b{color:#1e293b;font-weight:600}
+.proj-foot{margin-top:auto;padding-top:12px;border-top:1px solid #f1f5f9;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.proj-price{font-weight:800;color:#0f172a;font-size:16px}
+.proj-price small{display:block;color:#94a3b8;font-weight:500;font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+.proj-foot .btn{background:#0f172a;color:#fff;border-radius:7px;padding:6px 12px;font-size:11.5px;font-weight:600;border:none;transition:background .2s}
+.proj:hover .proj-foot .btn{background:#4f46e5}
 
 /* ---- Partner grid ---- */
 .cp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -1243,36 +1244,35 @@ img.proj-shot{object-fit:cover}
     return '<span class="proj-shot proj-shot--ph '+cls+'" aria-hidden="true">'+PH_ICON+(label?'<span class="ph-label">'+esc(label)+'</span>':'')+'</span>';
   }
   function projMediaInner(p, status){
-    var imgs = Array.isArray(p.images) ? p.images.filter(Boolean) : [];
+    var imgs = (Array.isArray(p.images) && p.images.length)
+      ? p.images.filter(Boolean)
+      : (p.coverImage ? [p.coverImage] : []);
     var alt = p.name || 'Project';
+    var imgUrl = imgs[0] || p.coverImage || '';
     return (status?'<span class="proj-status">'+esc(status)+'</span>':'')
-      + '<span class="proj-rera">RERA ✓</span>'
-      + projShot(imgs[0], 'proj-shot--main', alt, p.name)
-      + '<div class="proj-thumbs">'
-        + projShot(imgs[1], 'proj-shot--thumb', alt, '')
-        + projShot(imgs[2], 'proj-shot--thumb', alt, '')
-        + projShot(imgs[3], 'proj-shot--thumb', alt, '')
-      + '</div>';
+      + '<span class="proj-rera">HRERA ✓</span>'
+      + projShot(imgUrl, 'proj-shot--main', alt, p.name);
   }
 
   function projCardHTML(p, index){
     var dev = index.devFor(p);
-    var status = normStatus(p.status);
+    var status = normStatus(p.status) || p.status || '';
     return '<a class="proj" href="'+href('project',p.id)+'">'
       + '<div class="proj-media">'
         + projMediaInner(p, status)
       + '</div>'
       + '<div class="proj-body">'
-        + (dev?'<div class="proj-dev">'+esc(dev.name)+'</div>':'')
+        + (dev?'<div class="proj-dev">'+esc(dev.name)+'</div>':'<div class="proj-dev">Gurugram Luxury</div>')
         + '<h3>'+esc(p.name)+'</h3>'
-        + '<div class="proj-loc">'+esc(p.locality||'')+'</div>'
+        + '<div class="proj-loc">📍 '+esc(p.locality||'')+'</div>'
         + '<div class="proj-specs">'
           + (p.configs?'<span>⌂ <b>'+esc(p.configs)+'</b></span>':'')
           + (p.sizeRange?'<span>◻ <b>'+esc(p.sizeRange)+'</b></span>':'')
+          + (p.possession?'<span>📅 <b>'+esc(p.possession)+'</b></span>':'')
         + '</div>'
         + '<div class="proj-foot">'
-          + '<div class="proj-price">'+esc(p.priceRange||'—')+'<small>Price range</small></div>'
-          + '<span class="btn btn-ghost btn-sm">Read more</span>'
+          + '<div class="proj-price">'+esc(p.priceRange||'Price on Request')+'<small>Starting Price</small></div>'
+          + '<span class="btn btn-ghost btn-sm">Explore Project →</span>'
         + '</div>'
       + '</div></a>';
   }

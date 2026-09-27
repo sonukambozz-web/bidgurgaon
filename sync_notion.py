@@ -146,6 +146,7 @@ def map_notion_to_project(page, existing_dev_slugs):
         "reraCertificateUrl": rera_cert,
         "reraDetailsUrl": rera_details,
         "coverImage": cover_image,
+        "images": [cover_image] if cover_image else [],
         "summary": summary,
         "highlights": highlights,
         "activePartners": []

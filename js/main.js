@@ -825,58 +825,76 @@ const GGN = (() => {
   }
 
   function projectMediaInner(project, status, developer, devInitials) {
-    const imgs = Array.isArray(project.images) ? project.images.filter(Boolean) : [];
+    const imgs = (Array.isArray(project.images) && project.images.length)
+      ? project.images.filter(Boolean)
+      : (project.coverImage ? [project.coverImage] : []);
     const alt = project.name || 'Project';
+    const mainImg = imgs[0] || project.coverImage || '';
+    const hasMultiple = imgs.length > 1;
+
     return `
         ${status ? `<span class="pcard-status">${status}</span>` : ''}
-        <span class="pcard-rera-tag">RERA ✓</span>
-        ${projectShot(imgs[0], 'pcard-shot--main', alt, project.name)}
+        <span class="pcard-rera-tag">HRERA ✓</span>
+        ${projectShot(mainImg, 'pcard-shot--main', alt, project.name)}
+        ${hasMultiple ? `
         <div class="pcard-thumbs">
           ${projectShot(imgs[1], 'pcard-shot--thumb', alt, '')}
           ${projectShot(imgs[2], 'pcard-shot--thumb', alt, '')}
           ${projectShot(imgs[3], 'pcard-shot--thumb', alt, '')}
-        </div>
+        </div>` : ''}
         ${developer ? `<span class="pcard-seal" title="${developer.name}">${devInitials}</span>` : ''}`;
   }
 
-  // Large hero gallery for the project detail page: 1 main + 3 thumbs.
-  // Uses real photos from project.images when present, else placeholders.
+  // Large hero gallery for the project detail page
   function detailMediaInner(project) {
-    const imgs = Array.isArray(project.images) ? project.images.filter(Boolean) : [];
+    const imgs = (Array.isArray(project.images) && project.images.length)
+      ? project.images.filter(Boolean)
+      : (project.coverImage ? [project.coverImage] : []);
     const alt = project.name || 'Project';
+    const mainImg = imgs[0] || project.coverImage || '';
+    const hasMultiple = imgs.length > 1;
+
     return `
-        <div class="dg-main">${projectShot(imgs[0], 'dg-shot dg-shot--main', alt, project.name)}</div>
+        <div class="dg-main" style="${!hasMultiple ? 'flex:1; width:100%;' : ''}">
+          ${projectShot(mainImg, 'dg-shot dg-shot--main', alt, project.name)}
+        </div>
+        ${hasMultiple ? `
         <div class="dg-thumbs">
           ${projectShot(imgs[1], 'dg-shot dg-shot--thumb', alt, '')}
           ${projectShot(imgs[2], 'dg-shot dg-shot--thumb', alt, '')}
           ${projectShot(imgs[3], 'dg-shot dg-shot--thumb', alt, '')}
-        </div>`;
+        </div>` : ''}`;
   }
 
   function projectCardHTML(project, developer, opts = {}) {
     const devInitials = developer ? (developer.logo || initials(developer.name)) : '—';
     const partners = opts.partnersByProject?.[project.id] || [];
-    const status = normalizeStatus(project.status);
+    const status = normalizeStatus(project.status) || project.status || '';
+    const highlights = Array.isArray(project.highlights) ? project.highlights.slice(0, 2) : [];
+    const priceDisplay = project.priceRange || 'Price on Request';
+
     return `
     <a class="pcard" href="${detailHref('project', project.id, opts)}">
-      <div class="pcard-media pcard-gallery">
+      <div class="pcard-media">
         ${projectMediaInner(project, status, developer, devInitials)}
       </div>
       <div class="pcard-body">
-        <div class="dev">${developer ? developer.name : ''}</div>
+        <div class="dev">${developer ? developer.name : 'Gurugram Luxury'}</div>
         <h3>${project.name}</h3>
-        <div class="loc">${project.locality}</div>
+        <div class="loc"><span class="loc-ico">📍</span>${project.locality}</div>
         <div class="pcard-specs">
-          <span><span class="ic">⌂</span><b>${project.configs}</b></span>
-          <span><span class="ic">◻</span><b>${project.sizeRange}</b></span>
+          ${project.configs ? `<span><span class="ic">⌂</span><b>${project.configs}</b></span>` : ''}
+          ${project.sizeRange ? `<span><span class="ic">◻</span><b>${project.sizeRange}</b></span>` : ''}
+          ${project.possession ? `<span><span class="ic">📅</span><b>${project.possession}</b></span>` : ''}
         </div>
+        ${highlights.length ? `<div class="pcard-tags">${highlights.map(h => `<span class="pcard-tag">${h}</span>`).join('')}</div>` : ''}
         ${partnerSummaryHTML(partners)}
         <div class="pcard-foot">
           <div class="price-block">
-            <span class="price-lbl">Price range</span>
-            <span class="price">${project.priceRange}</span>
+            <span class="price-lbl">Starting Price</span>
+            <span class="price">${priceDisplay}</span>
           </div>
-          <span class="btn btn-outline btn-sm">Read more</span>
+          <span class="btn btn-outline btn-sm">Explore Project →</span>
         </div>
       </div>
     </a>`;

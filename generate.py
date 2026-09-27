@@ -129,16 +129,36 @@ def project_card(project, developer):
               <span class="pcard-partners-empty">None listed yet</span>
             </div>'''
 
+    highlights = (project.get("highlights") or [])[:2]
+    tags_html = ""
+    if highlights:
+        tags_html = f'<div class="pcard-tags">{"".join(f"""<span class="pcard-tag">{h}</span>""" for h in highlights)}</div>'
+
+    possession = project.get("possession") or ""
+    possession_html = f'<span><span class="ic">📅</span><b>{possession}</b></span>' if possession else ""
+    price_val = project.get('priceRange') or 'Price on Request'
+
     return f'''
         <a class="pcard" href="project-{project['id']}">
-          <div class="pcard-media pcard-gallery">{project_media_inner(project, status_badge)}</div>
+          <div class="pcard-media">{project_media_inner(project, status_badge)}</div>
           <div class="pcard-body">
             <div class="dev">{developer['name']}</div>
             <h3>{project['name']}</h3>
-            <div class="loc">{project['locality']}</div>
-            <div class="pcard-specs"><span><b>{project['configs']}</b></span><span><b>{project['sizeRange']}</b></span></div>
+            <div class="loc"><span class="loc-ico">📍</span>{project['locality']}</div>
+            <div class="pcard-specs">
+              {f"""<span><span class="ic">⌂</span><b>{project.get('configs')}</b></span>""" if project.get('configs') else ""}
+              {f"""<span><span class="ic">◻</span><b>{project.get('sizeRange')}</b></span>""" if project.get('sizeRange') else ""}
+              {possession_html}
+            </div>
+            {tags_html}
             {partner_html}
-            <div class="pcard-foot"><span class="price">{project['priceRange']}</span><span class="btn btn-outline btn-sm">Read more</span></div>
+            <div class="pcard-foot">
+              <div class="price-block">
+                <span class="price-lbl">Starting Price</span>
+                <span class="price">{price_val}</span>
+              </div>
+              <span class="btn btn-outline btn-sm">Explore Project →</span>
+            </div>
           </div>
         </a>'''
 
@@ -280,33 +300,51 @@ def _shot(url, cls, alt, label=""):
 
 def project_media_inner(project, status_badge):
     imgs = [u for u in (project.get("images") or []) if u]
+    if not imgs and project.get("coverImage"):
+        imgs = [project["coverImage"]]
     alt = project.get("name", "Project")
+    lead_img = imgs[0] if imgs else ""
+    has_multiple = len(imgs) > 1
+    thumbs_html = ""
+    if has_multiple:
+        thumbs_html = (
+            f'<div class="pcard-thumbs">'
+            f'{_shot(imgs[1] if len(imgs) > 1 else "", "pcard-shot--thumb", alt)}'
+            f'{_shot(imgs[2] if len(imgs) > 2 else "", "pcard-shot--thumb", alt)}'
+            f'{_shot(imgs[3] if len(imgs) > 3 else "", "pcard-shot--thumb", alt)}'
+            f'</div>'
+        )
     return (
         f'{status_badge}'
-        f'<span class="pcard-rera-tag">RERA ✓</span>'
-        f'{_shot(imgs[0] if len(imgs) > 0 else "", "pcard-shot--main", alt, project.get("name", ""))}'
-        f'<div class="pcard-thumbs">'
-        f'{_shot(imgs[1] if len(imgs) > 1 else "", "pcard-shot--thumb", alt)}'
-        f'{_shot(imgs[2] if len(imgs) > 2 else "", "pcard-shot--thumb", alt)}'
-        f'{_shot(imgs[3] if len(imgs) > 3 else "", "pcard-shot--thumb", alt)}'
-        f'</div>'
+        f'<span class="pcard-rera-tag">HRERA ✓</span>'
+        f'{_shot(lead_img, "pcard-shot--main", alt, project.get("name", ""))}'
+        f'{thumbs_html}'
     )
 
 
 def detail_media_inner(project):
     """Large hero gallery for the project detail page: 1 main + 3 thumbs.
-    Uses real photos from project['images'] when present, else placeholders."""
+    Uses real photos from project['images'] or coverImage when present."""
     imgs = [u for u in (project.get("images") or []) if u]
+    if not imgs and project.get("coverImage"):
+        imgs = [project["coverImage"]]
     alt = project.get("name", "Project")
+    lead_img = imgs[0] if imgs else ""
+    has_multiple = len(imgs) > 1
+    thumbs_html = ""
+    if has_multiple:
+        thumbs_html = (
+            f'<div class="dg-thumbs">'
+            f'{_shot(imgs[1] if len(imgs) > 1 else "", "dg-shot dg-shot--thumb", alt)}'
+            f'{_shot(imgs[2] if len(imgs) > 2 else "", "dg-shot dg-shot--thumb", alt)}'
+            f'{_shot(imgs[3] if len(imgs) > 3 else "", "dg-shot dg-shot--thumb", alt)}'
+            f'</div>'
+        )
     return (
-        f'<div class="dg-main">'
-        f'{_shot(imgs[0] if len(imgs) > 0 else "", "dg-shot dg-shot--main", alt, project.get("name", ""))}'
+        f'<div class="dg-main" style="{"width:100%; flex:1;" if not has_multiple else ""}">'
+        f'{_shot(lead_img, "dg-shot dg-shot--main", alt, project.get("name", ""))}'
         f'</div>'
-        f'<div class="dg-thumbs">'
-        f'{_shot(imgs[1] if len(imgs) > 1 else "", "dg-shot dg-shot--thumb", alt)}'
-        f'{_shot(imgs[2] if len(imgs) > 2 else "", "dg-shot dg-shot--thumb", alt)}'
-        f'{_shot(imgs[3] if len(imgs) > 3 else "", "dg-shot dg-shot--thumb", alt)}'
-        f'</div>'
+        f'{thumbs_html}'
     )
 
 
