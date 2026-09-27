@@ -1,0 +1,38 @@
+# Bid Gurgaon
+
+> Bid Gurgaon (https://bidgurgaon.in) is Gurugram's real estate leaderboard: a transparent, bid-ranked directory where RERA-certified developers and channel partners compete for visibility in the open. Rankings are determined by public bids — the higher the monthly bid for a position, the higher the listing appears. Anyone can outbid the holder of any position to move up. Coverage is Gurugram (Gurugram), Haryana, India.
+
+## What Bid Gurgaon is
+
+- A public leaderboard of RERA-certified real estate developers active in Gurugram.
+- A public leaderboard of RERA-registered channel partners (real estate brokers/advisors).
+- A browsable catalogue of new-launch, under-construction, near-possession and ready-to-move residential projects, each linked to its developer and the channel partners working on it.
+- Ranking mechanism: transparent position bidding. Each position on a board (and on each project's partner list) is held by whoever bids the most per month for it; any registered party can pay more to take a position.
+
+## Project status taxonomy
+
+Projects are classified into five stages: Pre-Launch, New Launch, Under Construction, Near Possession, Ready to Move.
+
+## Key pages
+
+- [Home](https://bidgurgaon.in/): overview and top developers, featured projects, active channel partners.
+- [Developer Leaderboard](https://bidgurgaon.in/pages/developers.html): RERA-certified developers ranked by position bid.
+- [Channel Partner Leaderboard](https://bidgurgaon.in/pages/channel-partners.html): RERA-registered brokers/advisors ranked by position bid.
+- [Projects](https://bidgurgaon.in/pages/projects.html): all live and upcoming residential projects, filterable by status.
+- [How It Works](https://bidgurgaon.in/pages/how-it-works.html): explanation of open, bid-based ranking.
+- [List Your Project (developers)](https://bidgurgaon.in/pages/for-developers.html): developer onboarding.
+- [Become a Channel Partner](https://bidgurgaon.in/pages/for-partners.html): partner onboarding.
+
+## Developers currently featured
+
+- Signature Global (India) Ltd.
+- Elan Limited (Elan Group)
+- M3M India Pvt. Ltd.
+- DLF Limited
+- Godrej Properties Limited
+
+## Notes
+
+- Location scope: Gurugram (Gurugram), Haryana, India — including Golf Course Road, Dwarka Expressway, Sohna Road, SPR and surrounding sectors.
+- All developers and channel partners listed are represented as RERA-certified / RERA-registered.
+- Full machine-readable page index: https://bidgurgaon.in/sitemap.xml

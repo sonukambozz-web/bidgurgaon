@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9Y2WHJBKD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9Y2WHJBKD');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon-180.png">
+<title>Bid Now — Take the #1 Position | Bid Gurgaon</title>
+<meta name="description" content="Pay the exact amount needed to take the #1 position on the Bid Gurgaon leaderboard — computed live from the current top bid.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://bidgurgaon.in/pages/bid-now.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bid Gurgaon">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Bid Now — Take the #1 Position | Bid Gurgaon">
+<meta property="og:description" content="Pay the exact amount needed to take the #1 position on the Bid Gurgaon leaderboard — computed live from the current top bid.">
+<meta property="og:url" content="https://bidgurgaon.in/pages/bid-now.html">
+<meta property="og:image" content="https://bidgurgaon.in/img/favicon-512.png">
+<meta property="og:image:secure_url" content="https://bidgurgaon.in/img/favicon-512.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Bid Gurgaon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bid Now — Take the #1 Position | Bid Gurgaon">
+<meta name="twitter:description" content="Pay the exact amount needed to take the #1 position on the Bid Gurgaon leaderboard — computed live from the current top bid.">
+<meta name="twitter:image" content="https://bidgurgaon.in/img/favicon-512.png">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  #pay-summary .field{margin-bottom:4px;}
+  #pay-summary .field label{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--steel);margin-bottom:8px;}
+  #pay-bid-input{width:100%;background:#fff;border:1px solid var(--line-bright);border-radius:var(--radius-sm);padding:13px 16px;color:var(--paper);font-family:var(--sans);font-size:19px;font-weight:700;transition:border-color .2s ease, box-shadow .2s ease;}
+  #pay-bid-input:focus{outline:none;border-color:var(--brass-bright);box-shadow:0 0 0 3px rgba(232,103,74,.15);}
+  #pay-summary .hint{font-size:12.5px;color:var(--steel);margin-top:8px;line-height:1.5;}
+  #pay-summary .form-error{display:none;background:rgba(240,120,126,.1);border:1px solid rgba(240,120,126,.4);color:var(--rose);border-radius:var(--radius-sm);padding:9px 13px;font-size:13px;margin-top:8px;}
+  #pay-summary .form-error.show{display:block;}
+  .pay-methods.disabled{opacity:.5;pointer-events:none;filter:grayscale(.3);}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand"><img src="../img/logo-full.png" alt="Bid Gurgaon — Rank, Outbid, Be Noticed" class="brand-logo"></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="developers.html">Developer Leaderboard</a></li>
+      <li><a href="channel-partners.html">Channel Partners</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="for-developers.html">List Your Project</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="../index.html">Home</a> / Bid Now</div>
+    <span class="eyebrow" id="pay-eyebrow">Leaderboard — #1 position</span>
+    <h1>Take the #1 position</h1>
+    <p class="desc">The amount below is computed live from the current top bid on this board — pay it and you hold #1.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="pay-card reveal" id="pay-card">
+      <div id="pay-summary">
+        <div class="pay-row"><span>Board</span><b id="pay-board-label">—</b></div>
+        <div class="pay-row"><span id="pay-position-label">Position you're claiming</span><b id="pay-position">—</b></div>
+        <div class="pay-row"><span id="pay-current-label">Current bid at this position</span><b id="pay-current">—</b></div>
+        <div class="pay-row"><span>Minimum to take this position</span><b id="pay-increment">—</b></div>
+
+        <div class="field" style="margin:18px 0 4px;">
+          <label for="pay-bid-input">Your bid (₹ per month)</label>
+          <input id="pay-bid-input" type="number" inputmode="numeric" step="1" min="0" placeholder="Enter your bid">
+          <div class="hint" id="pay-bid-hint">Enter any amount higher than the current bid at this position. Bid above #1 and you take the top spot.</div>
+          <div class="form-error" id="pay-bid-error">Enter an amount higher than the current bid to claim this position.</div>
+        </div>
+
+        <div class="pay-total">
+          <span class="lbl">You pay</span>
+          <span class="amt" id="pay-amount">—</span>
+        </div>
+
+        <div class="pay-methods">
+          <a id="pay-upi-btn" class="btn btn-bid btn-block" href="#">Pay via UPI app</a>
+
+          <div class="pay-qr-block">
+            <img id="pay-qr-img" src="" alt="UPI QR code" class="pay-qr-img">
+            <div class="pay-qr-meta">
+              <div class="pay-qr-company mono" id="pay-qr-company">—</div>
+              <div class="pay-qr-upi">UPI ID: <span class="mono" id="pay-qr-upi-id">—</span></div>
+              <div class="pay-qr-note">Scan with any UPI app and enter <b id="pay-qr-amount">—</b> — this QR doesn't carry the amount automatically.</div>
+            </div>
+          </div>
+
+          <details class="pay-bank-details">
+            <summary>Prefer NEFT / IMPS / bank transfer?</summary>
+            <div class="pay-bank-grid" id="pay-bank-grid"></div>
+          </details>
+
+          <a id="pay-btn-razorpay" class="btn btn-outline btn-block" href="#" style="display:none;">Pay by card / netbanking</a>
+
+          <a href="https://wa.me/917669766992" class="btn btn-outline btn-block" id="pay-whatsapp-fallback">I've paid — send confirmation on WhatsApp</a>
+        </div>
+
+        <p class="pay-note">This locks in your bid for the position you selected. After payment, WhatsApp your payment confirmation along with your RERA registration number — we verify and put your listing live within one business day.</p>
+      </div>
+
+      <div class="pay-success" id="pay-success">
+        <div class="check">✅</div>
+        <h3>Payment received</h3>
+        <p style="color:var(--paper-dim); margin-top:10px;">Payment ID: <span class="mono" id="pay-id"></span></p>
+        <p class="pay-note">Screenshot this confirmation and WhatsApp it to us along with your RERA registration number — we verify and put your #1 listing live within one business day.</p>
+        <a href="https://wa.me/917669766992" class="btn btn-brass btn-block" style="margin-top:16px;" id="pay-whatsapp-success">WhatsApp confirmation now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom">
+      <span data-cms="footerNote">© 2026 Bid Gurgaon.</span>
+      <span>Gurugram, Haryana</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+<script src="../js/firebase-config.js"></script>
+<script src="../js/firebase-data.js"></script>
+<script src="../js/market.js"></script>
+<script src="../js/main.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="../js/payment-config.js"></script>
+<script>
+(async function () {
+  const params = new URLSearchParams(location.search);
+  const type = params.get('type') === 'partner' ? 'partner' : 'developer';
+  const bid = await GGN.computeRequiredBid(type);
+  const boardName = type === 'developer' ? 'Developer Leaderboard' : 'Channel Partner Leaderboard';
+  const waNumber = '917669766992'; // Payment confirmations only — not the general customer care number
+  const pay = window.PAYMENT_CONFIG || {};
+
+  // Per-position bidding: a row on any board can deep-link here with the exact
+  // rank it wants, who currently holds it, and that position's current bid.
+  // Falls back to the classic "#1 position" flow when no rank is supplied.
+  const rankParam = parseInt(params.get('rank'), 10);
+  const hasRank = !Number.isNaN(rankParam) && rankParam > 0;
+  const entity = params.get('entity') ? decodeURIComponent(params.get('entity')) : '';
+  const currentParam = params.get('current');
+  const targetCurrent = currentParam != null && currentParam !== ''
+    ? Math.max(0, Math.round(Number(currentParam) || 0))
+    : bid.current;
+  const increment = bid.increment;
+  const suggested = targetCurrent > 0 ? targetCurrent + increment : increment;
+
+  // Labels
+  document.getElementById('pay-eyebrow').textContent = hasRank
+    ? `${boardName} — position #${rankParam}`
+    : `${boardName} — #1 position`;
+  document.getElementById('pay-board-label').textContent = boardName;
+  document.getElementById('pay-position').textContent = hasRank
+    ? (entity ? `#${rankParam} — currently ${entity}` : `#${rankParam}`)
+    : (bid.hasBoard ? '#1 — the top spot' : '#1 — open, no one on the board yet');
+  document.getElementById('pay-current').textContent = targetCurrent > 0
+    ? GGN.fmtINR(targetCurrent) + '/mo'
+    : 'Position is open';
+  document.getElementById('pay-increment').textContent = targetCurrent > 0
+    ? 'More than ' + GGN.fmtINR(targetCurrent) + '/mo'
+    : 'Any amount';
+
+  const heading = document.querySelector('.page-head h1');
+  if (heading) heading.textContent = hasRank ? `Claim position #${rankParam}` : 'Take the #1 position';
+  const desc = document.querySelector('.page-head .desc');
+  if (desc) desc.textContent = hasRank
+    ? `Pay more than the current bid at this position to claim it — bid above #1 and you take the top spot outright.`
+    : `The amount below is computed live from the current top bid on this board — pay it and you hold #1.`;
+
+  const input = document.getElementById('pay-bid-input');
+  const errorEl = document.getElementById('pay-bid-error');
+  const methods = document.querySelector('.pay-methods');
+  input.min = targetCurrent + 1;
+  input.value = suggested;
+
+  const rzpKey = window.RAZORPAY_KEY_ID;
+  const rzpBtn = document.getElementById('pay-btn-razorpay');
+
+  function currentAmount() { return Math.round(Number(input.value) || 0); }
+
+  function update() {
+    const amt = currentAmount();
+    const valid = amt > targetCurrent && amt > 0;
+
+    document.getElementById('pay-amount').textContent = amt > 0 ? GGN.fmtINR(amt) + '/mo' : '—';
+
+    errorEl.classList.toggle('show', !valid && input.value !== '');
+    methods.classList.toggle('disabled', !valid);
+    if (!valid) return;
+
+    // UPI deep link — carries the exact amount, opens the person's UPI app directly
+    const upiNote = `Bid Gurgaon - Rank ${hasRank ? rankParam : 1} (${type})`;
+    document.getElementById('pay-upi-btn').href =
+      `upi://pay?pa=${encodeURIComponent(pay.upiId)}&pn=${encodeURIComponent(pay.companyName)}&am=${amt}&cu=INR&tn=${encodeURIComponent(upiNote)}`;
+
+    // Static QR can't embed an amount — show the number to type in
+    document.getElementById('pay-qr-amount').textContent = GGN.fmtINR(amt);
+
+    // WhatsApp confirmation text carries the position + amount
+    const posText = hasRank ? `position #${rankParam}` : `#1`;
+    const waText = encodeURIComponent(`Hi, I've paid ${GGN.fmtINR(amt)} to claim ${posText} on the ${boardName}. Sharing my payment confirmation now.`);
+    document.getElementById('pay-whatsapp-fallback').href = `https://wa.me/${waNumber}?text=${waText}`;
+
+    if (rzpKey && rzpKey !== 'YOUR_RAZORPAY_KEY_ID') {
+      rzpBtn.textContent = `Pay ${GGN.fmtINR(amt)} by card / netbanking`;
+    }
+  }
+
+  input.addEventListener('input', update);
+
+  // QR / bank details are static — set once
+  document.getElementById('pay-qr-img').src = pay.qrImage;
+  document.getElementById('pay-qr-company').textContent = pay.companyName;
+  document.getElementById('pay-qr-upi-id').textContent = pay.upiId;
+
+  const b = pay.bank || {};
+  document.getElementById('pay-bank-grid').innerHTML = `
+    <div class="pay-row"><span>Account name</span><b>${b.accountName || ''}</b></div>
+    <div class="pay-row"><span>Account number</span><b class="mono">${b.accountNumber || ''}</b></div>
+    <div class="pay-row"><span>IFSC</span><b class="mono">${b.ifsc || ''}</b></div>
+    <div class="pay-row"><span>SWIFT</span><b class="mono">${b.swift || ''}</b></div>
+    <div class="pay-row"><span>Bank</span><b>${b.bankName || ''}</b></div>
+    <div class="pay-row"><span>Branch</span><b>${b.branch || ''}</b></div>
+  `;
+
+  // Razorpay stays dormant — only appears once a real Key ID is set in payment-config.js
+  if (rzpKey && rzpKey !== 'YOUR_RAZORPAY_KEY_ID') {
+    rzpBtn.style.display = 'flex';
+    rzpBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const amt = currentAmount();
+      if (!(amt > targetCurrent)) { update(); return; }
+      const rzp = new Razorpay({
+        key: rzpKey,
+        amount: amt * 100, // Razorpay expects paise
+        currency: 'INR',
+        name: 'Bid Gurgaon',
+        description: hasRank ? `Position #${rankParam} — ${boardName}` : `#1 position — ${boardName}`,
+        notes: { board: type, rank: String(hasRank ? rankParam : 1), bidAmount: String(amt) },
+        theme: { color: '#E8674A' },
+        handler: function (response) {
+          document.getElementById('pay-summary').style.display = 'none';
+          document.getElementById('pay-id').textContent = response.razorpay_payment_id;
+          document.getElementById('pay-success').classList.add('show');
+          const posText = hasRank ? `position #${rankParam}` : `#1`;
+          const confirmText = encodeURIComponent(`Payment done for ${posText} on the ${boardName}. Amount: ${GGN.fmtINR(amt)}. Payment ID: ${response.razorpay_payment_id}. My RERA registration number is: `);
+          document.getElementById('pay-whatsapp-success').href = `https://wa.me/${waNumber}?text=${confirmText}`;
+        }
+      });
+      rzp.open();
+    });
+  }
+
+  update();
+})();
+</script>
+</body>
+</html>

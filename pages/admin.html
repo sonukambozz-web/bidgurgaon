@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9Y2WHJBKD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9Y2WHJBKD');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<title>Admin — Bid Gurgaon</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand"><img src="../img/logo-full.png" alt="Bid Gurgaon" class="brand-logo"></a>
+    <span class="eyebrow">Admin Console</span>
+  </div>
+</nav>
+
+<main class="admin-shell wrap">
+
+  <!-- ===================== LOGIN ===================== -->
+  <div id="login-view">
+    <div class="login-card">
+      <h1>Sign in</h1>
+      <p class="sub">Manage the developer, channel partner and project boards.</p>
+      <div id="login-error" class="form-error"></div>
+      <form id="login-form">
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" required autocomplete="username">
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-brass btn-block">Sign in</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================== DASHBOARD ===================== -->
+  <div id="dashboard-view" style="display:none;">
+    <div class="admin-topbar">
+      <div class="who">Signed in as <b id="who-email"></b></div>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <!-- Read-only export. Downloads everything in this console as a
+             data.json file, which generate.py turns into pre-rendered
+             developer/project pages + sitemap entries so Google can index
+             them. Nothing is written to Firestore by this button. -->
+        <button id="export-btn" class="btn btn-outline btn-sm" title="Download every record as data.json, so the site can be rebuilt with a page per developer and project">Export data.json</button>
+        <button id="signout-btn" class="btn btn-outline btn-sm">Sign out</button>
+      </div>
+    </div>
+
+    <div class="admin-tabs">
+      <button class="admin-tab active" data-tab="developers">Developers</button>
+      <button class="admin-tab" data-tab="channelPartners">Channel Partners</button>
+      <button class="admin-tab" data-tab="projects">Projects</button>
+      <button class="admin-tab" data-tab="siteContent">Site Content</button>
+    </div>
+
+    <!-- ---------- DEVELOPERS ---------- -->
+    <section class="admin-panel active" id="panel-developers">
+      <div class="panel-head">
+        <h2>Developers <span class="count" id="count-developers"></span></h2>
+        <button class="btn btn-brass btn-sm" data-open-form="developers">+ Add developer</button>
+      </div>
+
+      <div class="form-card" id="form-developers">
+        <h3 id="form-developers-title">Add developer</h3>
+        <div class="form-error" id="form-developers-error"></div>
+        <div class="form-grid">
+          <div class="field"><label>Name</label><input type="text" data-f="name" placeholder="Vantage Realty Group"></div>
+          <div class="field"><label>Slug / ID <span class="hint" style="display:inline">(used in URLs)</span></label><input type="text" data-f="id" placeholder="vantage-realty"></div>
+          <div class="field"><label>Rank</label><input type="number" min="1" data-f="rank"></div>
+          <div class="field"><label>Position bid (₹)</label><input type="number" min="0" data-f="bidAmount"></div>
+          <div class="field"><label>Bid cycle</label><input type="text" data-f="bidCycle" placeholder="month"></div>
+          <div class="field"><label>On board since</label><input type="date" data-f="since"></div>
+          <div class="field"><label>RERA number</label><input type="text" data-f="rera" placeholder="RERA-HRY-2019-0142"></div>
+          <div class="field"><label>Logo initials</label><input type="text" data-f="logo" maxlength="3" placeholder="VR"></div>
+          <div class="field"><label>Locality</label><input type="text" data-f="locality" placeholder="Golf Course Road Extn."></div>
+          <div class="field full"><label>Tagline</label><input type="text" data-f="tagline" placeholder="Glass-and-stone residences on Golf Course Road Extension."></div>
+          <div class="field full">
+            <label>Project IDs (one per line)</label>
+            <textarea data-f="projects" placeholder="solstice-heights&#10;vantage-arc"></textarea>
+            <div class="hint">Must match the Slug / ID of a project below.</div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-brass btn-sm" data-save="developers">Save developer</button>
+          <button class="btn btn-outline btn-sm" data-cancel="developers">Cancel</button>
+        </div>
+      </div>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th>Rank</th><th>Name</th><th>Locality</th><th>Bid</th><th>Since</th><th></th></tr></thead>
+          <tbody id="table-developers"><tr class="empty-row"><td colspan="6">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ---------- CHANNEL PARTNERS ---------- -->
+    <section class="admin-panel" id="panel-channelPartners">
+      <div class="panel-head">
+        <h2>Channel Partners <span class="count" id="count-channelPartners"></span></h2>
+        <button class="btn btn-brass btn-sm" data-open-form="channelPartners">+ Add channel partner</button>
+      </div>
+
+      <div class="form-card" id="form-channelPartners">
+        <h3 id="form-channelPartners-title">Add channel partner</h3>
+        <div class="form-error" id="form-channelPartners-error"></div>
+        <div class="form-grid">
+          <div class="field"><label>Name</label><input type="text" data-f="name" placeholder="Skyline Realty Partners"></div>
+          <div class="field"><label>Slug / ID</label><input type="text" data-f="id" placeholder="skyline-partners"></div>
+          <div class="field"><label>Rank</label><input type="number" min="1" data-f="rank"></div>
+          <div class="field"><label>Position bid (₹)</label><input type="number" min="0" data-f="bidAmount"></div>
+          <div class="field"><label>Bid cycle</label><input type="text" data-f="bidCycle" placeholder="month"></div>
+          <div class="field"><label>On board since</label><input type="date" data-f="since"></div>
+          <div class="field"><label>Phone</label><input type="text" data-f="phone" placeholder="+91 98XXX XXXXX"></div>
+          <div class="field"><label>WhatsApp</label><input type="text" data-f="whatsapp" placeholder="+91 98XXX XXXXX"></div>
+          <div class="field"><label>Channel RERA number</label><input type="text" data-f="reraChannel" placeholder="RERA-HRY-CP-0231"></div>
+          <div class="field"><label>Years of experience</label><input type="number" min="0" data-f="experienceYears" placeholder="6"></div>
+          <div class="field"><label>Photo URL</label><input type="text" data-f="photo" placeholder="https://…/headshot.jpg (optional — falls back to initials)"></div>
+          <div class="field"><label>Tagline</label><input type="text" data-f="tagline" placeholder="Luxury homes specialist, Golf Course Road"></div>
+          <div class="field"><label>Specialization (comma-separated)</label><input type="text" data-f="specialization" placeholder="Luxury apartments, Investment advisory"></div>
+          <div class="field"><label>Languages (comma-separated)</label><input type="text" data-f="languages" placeholder="English, Hindi, Punjabi"></div>
+          <div class="field full"><label>About / bio</label><textarea data-f="bio" placeholder="A short profile a buyer can read before calling — background, focus areas, notable deals…"></textarea></div>
+          <div class="field full">
+            <label>Active on project IDs (one per line)</label>
+            <textarea data-f="activeOn" placeholder="solstice-heights&#10;meridian-greens"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-brass btn-sm" data-save="channelPartners">Save channel partner</button>
+          <button class="btn btn-outline btn-sm" data-cancel="channelPartners">Cancel</button>
+        </div>
+      </div>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th>Rank</th><th>Name</th><th>Phone</th><th>Bid</th><th>Since</th><th></th></tr></thead>
+          <tbody id="table-channelPartners"><tr class="empty-row"><td colspan="6">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ---------- PROJECTS ---------- -->
+    <section class="admin-panel" id="panel-projects">
+      <div class="panel-head">
+        <h2>Projects <span class="count" id="count-projects"></span></h2>
+        <button class="btn btn-brass btn-sm" data-open-form="projects">+ Add project</button>
+      </div>
+
+      <div class="form-card" id="form-projects">
+        <h3 id="form-projects-title">Add project</h3>
+        <div class="form-error" id="form-projects-error"></div>
+        <div class="form-grid">
+          <div class="field"><label>Name</label><input type="text" data-f="name" placeholder="Solstice Heights"></div>
+          <div class="field"><label>Slug / ID</label><input type="text" data-f="id" placeholder="solstice-heights"></div>
+          <div class="field"><label>Developer ID</label><input type="text" data-f="developerId" list="developer-ids" placeholder="vantage-realty"></div>
+          <div class="field"><label>Status</label><input type="text" data-f="status" list="status-options" placeholder="Under Construction"></div>
+          <div class="field"><label>Locality</label><input type="text" data-f="locality" placeholder="Golf Course Road Extn., Sector 63"></div>
+          <div class="field"><label>Possession</label><input type="text" data-f="possession" placeholder="Dec 2028"></div>
+          <div class="field"><label>Configurations</label><input type="text" data-f="configs" placeholder="3, 4 & 5 BHK Residences"></div>
+          <div class="field"><label>Size range</label><input type="text" data-f="sizeRange" placeholder="2,150 – 4,800 sq.ft."></div>
+          <div class="field"><label>Price range</label><input type="text" data-f="priceRange" placeholder="₹3.8 Cr – ₹8.6 Cr"></div>
+          <div class="field"><label>RERA registration</label><input type="text" data-f="rera" placeholder="RC/REP/HARERA/GGM/867/2024/142"></div>
+          <div class="field full"><label>Summary</label><textarea data-f="summary" placeholder="A cluster of four 42-storey towers…"></textarea></div>
+          <div class="field full"><label>Highlights (one per line)</label><textarea data-f="highlights" placeholder="Rooftop infinity pool and skydeck&#10;70% open green area"></textarea></div>
+          <div class="field full">
+            <label>Project photos — image URLs (one per line, up to 4)</label>
+            <textarea data-f="images" placeholder="https://…/elan-emperor-1.jpg&#10;https://…/elan-emperor-2.jpg&#10;https://…/elan-emperor-3.jpg&#10;https://…/elan-emperor-4.jpg"></textarea>
+            <span class="hint" style="display:block;margin-top:6px;color:#8a8178;font-size:12.5px;">First link = large photo, next three = thumbnails. Use full https:// links (developer site, Google Drive share link, a CDN) or paths to files placed in the site's <code>/img/projects/</code> folder (e.g. <code>/img/projects/elan-emperor-1.jpg</code>). Leave blank to keep the placeholder.</span>
+          </div>
+          <div class="field full">
+            <label>Active channel partner IDs (one per line)</label>
+            <textarea data-f="activePartners" placeholder="skyline-partners&#10;capital-square"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-brass btn-sm" data-save="projects">Save project</button>
+          <button class="btn btn-outline btn-sm" data-cancel="projects">Cancel</button>
+        </div>
+      </div>
+
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th>Name</th><th>Developer</th><th>Status</th><th>Locality</th><th></th></tr></thead>
+          <tbody id="table-projects"><tr class="empty-row"><td colspan="5">Loading…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ---------- SITE CONTENT ---------- -->
+    <section class="admin-panel" id="panel-siteContent">
+      <div class="panel-head">
+        <h2>Site Content</h2>
+      </div>
+      <p class="hint" style="margin:-8px 0 20px;">
+        Edit the homepage's headline, copy, and support phone number here — changes go live
+        immediately on the public site, no redeploy needed. Leave a field blank to keep the
+        site's built-in default text for it.
+      </p>
+      <div class="form-error" id="form-siteContent-error"></div>
+      <div class="form-card open" id="form-siteContent" style="position:static;">
+        <h3>Brand</h3>
+        <div class="form-grid">
+          <div class="field"><label>Site name</label><input type="text" data-sc="name" placeholder="Bid Gurgaon"></div>
+          <div class="field"><label>Full name</label><input type="text" data-sc="fullName" placeholder="Bid Gurgaon — Gurugram's Real Estate Leaderboard"></div>
+          <div class="field"><label>Tagline</label><input type="text" data-sc="tagline" placeholder="Gurugram's real estate, ranked in the open."></div>
+          <div class="field"><label>Domain</label><input type="text" data-sc="domain" placeholder="https://bidgurgaon.in"></div>
+          <div class="field"><label>Support phone</label><input type="text" data-sc="supportPhone" placeholder="+91 98XXX XXXXX"></div>
+          <div class="field"><label>WhatsApp number</label><input type="text" data-sc="whatsappNumber" placeholder="+91 98XXX XXXXX"></div>
+        </div>
+
+        <h3 style="margin-top:24px;">Homepage hero</h3>
+        <div class="form-grid">
+          <div class="field"><label>Eyebrow</label><input type="text" data-sc="heroEyebrow" placeholder="Gurugram, Haryana — Live Ranking"></div>
+          <div class="field full"><label>Lede paragraph</label><textarea data-sc="heroLede" placeholder="Every developer and channel partner on this board has paid to be here…"></textarea></div>
+          <div class="field"><label>Primary button text</label><input type="text" data-sc="heroCtaPrimary" placeholder="Browse projects"></div>
+          <div class="field"><label>Secondary button text</label><input type="text" data-sc="heroCtaSecondary" placeholder="See full leaderboard"></div>
+        </div>
+
+        <h3 style="margin-top:24px;">"How the board works" steps</h3>
+        <div class="form-grid">
+          <div class="field"><label>Step 1 title</label><input type="text" data-sc="hiw1Title" placeholder="Developer places a bid"></div>
+          <div class="field full"><label>Step 1 text</label><textarea data-sc="hiw1Desc"></textarea></div>
+          <div class="field"><label>Step 2 title</label><input type="text" data-sc="hiw2Title" placeholder="Position — and price — go public"></div>
+          <div class="field full"><label>Step 2 text</label><textarea data-sc="hiw2Desc"></textarea></div>
+          <div class="field"><label>Step 3 title</label><input type="text" data-sc="hiw3Title" placeholder="Outbid anytime"></div>
+          <div class="field full"><label>Step 3 text</label><textarea data-sc="hiw3Desc"></textarea></div>
+        </div>
+
+        <h3 style="margin-top:24px;">Footer</h3>
+        <div class="form-grid">
+          <div class="field full"><label>Footer note</label><input type="text" data-sc="footerNote" placeholder="© 2026 Bid Gurgaon. Bid amounts shown represent paid visibility positions on the Bid Gurgaon board — position is determined by visibility bid, not by a rating of developer quality. Project details are not independently verified; confirm them with the developer before you transact."></div>
+        </div>
+
+        <h3 style="margin-top:24px;">"For Developers" onboarding page</h3>
+        <div class="form-grid">
+          <div class="field"><label>Eyebrow</label><input type="text" data-sc="devEyebrow" placeholder="RERA-certified developers only"></div>
+          <div class="field"><label>Headline</label><input type="text" data-sc="devH1" placeholder="Get your project on the board"></div>
+          <div class="field full"><label>Intro text</label><textarea data-sc="devDesc"></textarea></div>
+          <div class="field"><label>Step 1 title</label><input type="text" data-sc="devStep1Title"></div>
+          <div class="field full"><label>Step 1 text</label><textarea data-sc="devStep1Desc"></textarea></div>
+          <div class="field"><label>Step 2 title</label><input type="text" data-sc="devStep2Title"></div>
+          <div class="field full"><label>Step 2 text</label><textarea data-sc="devStep2Desc"></textarea></div>
+          <div class="field"><label>Step 3 title</label><input type="text" data-sc="devStep3Title"></div>
+          <div class="field full"><label>Step 3 text</label><textarea data-sc="devStep3Desc"></textarea></div>
+          <div class="field"><label>CTA heading</label><input type="text" data-sc="devCtaHeading"></div>
+          <div class="field full"><label>CTA text</label><textarea data-sc="devCtaDesc"></textarea></div>
+        </div>
+
+        <h3 style="margin-top:24px;">"For Channel Partners" onboarding page</h3>
+        <div class="form-grid">
+          <div class="field"><label>Eyebrow</label><input type="text" data-sc="partnerEyebrow" placeholder="Registered channel partners only"></div>
+          <div class="field"><label>Headline</label><input type="text" data-sc="partnerH1" placeholder="Get your name on the board"></div>
+          <div class="field full"><label>Intro text</label><textarea data-sc="partnerDesc"></textarea></div>
+          <div class="field"><label>Step 1 title</label><input type="text" data-sc="partnerStep1Title"></div>
+          <div class="field full"><label>Step 1 text</label><textarea data-sc="partnerStep1Desc"></textarea></div>
+          <div class="field"><label>Step 2 title</label><input type="text" data-sc="partnerStep2Title"></div>
+          <div class="field full"><label>Step 2 text</label><textarea data-sc="partnerStep2Desc"></textarea></div>
+          <div class="field"><label>Step 3 title</label><input type="text" data-sc="partnerStep3Title"></div>
+          <div class="field full"><label>Step 3 text</label><textarea data-sc="partnerStep3Desc"></textarea></div>
+          <div class="field"><label>CTA heading</label><input type="text" data-sc="partnerCtaHeading"></div>
+          <div class="field full"><label>CTA text</label><textarea data-sc="partnerCtaDesc"></textarea></div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-brass btn-sm" id="save-siteContent">Save site content</button>
+        </div>
+      </div>
+    </section>
+
+    <datalist id="developer-ids"></datalist>
+    <datalist id="status-options">
+      <option value="Under Construction"></option>
+      <option value="Ready to Move"></option>
+      <option value="Launching Soon"></option>
+    </datalist>
+  </div>
+
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+<script src="../js/firebase-config.js"></script>
+<script src="../js/firebase-data.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

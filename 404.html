@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <title>Redirecting… — Bid Gurgaon</title>
+
+  <!--
+    Smart resolver: static per-entity pages (project-<id>.html, developer-<id>.html,
+    partner-<id>.html) are only generated for records present in data.json. Any record
+    that exists only in the live Firestore data (e.g. a project or developer added via
+    the admin after the last build) has no static page and would 404 here.
+    This script maps the requested filename to the dynamic template
+    (project.html?id=<id>, developer.html?id=<id>, partner.html?id=<id>), which renders
+    from the same live data using the same id — so it resolves for every live record.
+    Runs before paint to avoid a flash. Front-end only; no Firebase/data changes.
+  -->
+  <script>
+  (function () {
+    try {
+      var p = location.pathname;
+      // Match .../project-<id>[.html] | developer-<id>[.html] | partner-<id>[.html]
+      // The extension is optional because firebase.json sets cleanUrls:true,
+      // so by the time we get here the URL is usually "/pages/project-foo"
+      // with the ".html" already stripped.
+      var m = p.match(/^(.*\/)?(project|developer|partner)-(.+?)(?:\.html)?$/i);
+      if (m) {
+        var dir = m[1] || '/';
+        var type = m[2].toLowerCase();
+        var id = m[3];
+        var target = dir + type + '.html?id=' + encodeURIComponent(id);
+        // Guard against redirect loops.
+        if ((location.pathname + location.search) !== target) {
+          location.replace(target + (location.hash || ''));
+        }
+      }
+    } catch (e) { /* fall through to the friendly 404 below */ }
+  })();
+  </script>
+
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #F7F3EF; color: #1c1a17; display: flex; min-height: 100vh; align-items: center; justify-content: center; padding: 24px; }
+    .card { max-width: 460px; width: 100%; background: #fff; border: 1px solid #e7ded5; border-radius: 16px;
+      padding: 40px 32px; text-align: center; box-shadow: 0 8px 30px rgba(60,40,20,0.08); }
+    .logo { height: 34px; margin-bottom: 22px; }
+    .code { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #b07a2f; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 24px; font-weight: 600; margin: 0 0 12px; }
+    p { color: #5c554d; line-height: 1.6; font-size: 15px; margin: 0 0 24px; }
+    .links { display: flex; flex-direction: column; gap: 10px; }
+    a.btn { display: block; text-decoration: none; padding: 13px 16px; border-radius: 10px; font-weight: 600; font-size: 14px; }
+    a.primary { background: #c9852f; color: #fff; }
+    a.ghost { background: #f2ebe3; color: #3a342d; }
+    a.btn:hover { filter: brightness(0.96); }
+    #note { color: #948b80; font-size: 13px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="/img/logo-full.png" alt="Bid Gurgaon" class="logo"
+         onerror="this.style.display='none'">
+    <p class="code">404</p>
+    <h1>We couldn't find that page</h1>
+    <p id="note">The page may have moved, or the link may be mistyped. Try one of these instead:</p>
+    <div class="links">
+      <a class="btn primary" href="/">Go to homepage</a>
+      <a class="btn ghost" href="/pages/projects">Browse all projects</a>
+      <a class="btn ghost" href="/pages/developers">Developer leaderboard</a>
+      <a class="btn ghost" href="/pages/channel-partners">Channel partner leaderboard</a>
+    </div>
+  </div>
+</body>
+</html>

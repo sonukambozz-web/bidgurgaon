@@ -1,0 +1,28 @@
+{
+  "hosting": {
+    "public": ".",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "generate.py",
+      "**/__pycache__/**",
+      "*.md"
+    ],
+    "rewrites": [
+      {
+        "source": "/pages/developer-*",
+        "destination": "/pages/developer.html"
+      },
+      {
+        "source": "/pages/project-*",
+        "destination": "/pages/project.html"
+      },
+      {
+        "source": "/pages/partner-*",
+        "destination": "/pages/partner.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+# Bid Gurgaon — Gurugram's real estate leaderboard
+# https://bidgurgaon.in
+
+User-agent: *
+Allow: /
+
+# Internal / gated tooling — not for indexing
+Disallow: /pages/admin.html
+Disallow: /pages/bid-now.html
+
+# The bare live templates only render something when a record slug is supplied,
+# so keep the id-less address out of the index. The "$" anchors each rule to the
+# exact path: it must NOT match /pages/developer-dlf-limited or /pages/developers,
+# which are the real, indexable pages.
+Disallow: /pages/project.html
+Disallow: /pages/project$
+Disallow: /pages/partner.html
+Disallow: /pages/partner$
+Disallow: /pages/developer.html
+Disallow: /pages/developer$
+
+# AI / LLM crawlers are welcome — see llms.txt for a structured summary
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://bidgurgaon.in/sitemap.xml

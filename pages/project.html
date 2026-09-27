@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9Y2WHJBKD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y9Y2WHJBKD');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon-180.png">
+<title>Project — Bid Gurgaon</title>
+<meta name="description" content="Project details, pricing, and active channel partners on Bid Gurgaon's Gurugram real estate leaderboard.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bid Gurgaon">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Project — Bid Gurgaon">
+<meta property="og:description" content="Project details, pricing, and active channel partners on Bid Gurgaon's Gurugram real estate leaderboard.">
+<meta property="og:image" content="https://bidgurgaon.in/img/favicon-512.png">
+<meta property="og:image:secure_url" content="https://bidgurgaon.in/img/favicon-512.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="Bid Gurgaon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bidgurgaon.in/img/favicon-512.png">
+<!-- Robots is deliberately "index, follow" here: firebase.json rewrites
+     /pages/project-<slug> to this file, so those clean URLs are real,
+     indexable project pages. GGN.applyEntitySeo() writes the per-project
+     title, description, canonical and JSON-LD at render time, and switches
+     this tag to noindex when the slug matches no project. The bare
+     /pages/project.html address is kept out of the index by robots.txt. -->
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bidgurgaon.in/pages/projects">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand"><img src="../img/logo-full.png" alt="Bid Gurgaon — Rank, Outbid, Be Noticed" class="brand-logo"></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="developers.html">Developer Leaderboard</a></li>
+      <li><a href="channel-partners.html">Channel Partners</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="for-developers.html">List Your Project</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="for-developers.html" class="btn btn-outline btn-sm">Get on the board</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="detail-mount">
+  <div class="wrap section"><p style="color:var(--steel);">Loading project…</p></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom">
+      <span data-cms="footerNote">© 2026 Bid Gurgaon. Bid amounts shown represent paid visibility positions on the Bid Gurgaon board — position is determined by visibility bid, not by a rating of developer quality. Project details are not independently verified; confirm them with the developer before you transact.</span>
+      <span>Gurugram, Haryana</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+<script src="../js/firebase-config.js"></script>
+<script src="../js/firebase-data.js"></script>
+<script src="../js/market.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  const projId = GGN.entityId('project');
+  GGN.renderProjectDetail('#detail-mount', projId);
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* ================================================================
+   ADMIN CONSOLE — extends css/style.css tokens (blue/purple theme).
+   Only loaded on pages/admin.html.
+================================================================= */
+
+.admin-shell{min-height:calc(100vh - 76px); padding:48px 0 80px;}
+
+/* ---------- Login ---------- */
+.login-card{
+  max-width:400px; margin:8vh auto 0;
+  background:var(--grad-card); border:1px solid var(--line-bright);
+  border-radius:var(--radius); padding:40px 32px;
+  box-shadow:var(--glow-soft), var(--glow-purple);
+  backdrop-filter:blur(10px);
+}
+.login-card h1{font-size:24px; margin-bottom:8px;}
+.login-card p.sub{color:var(--paper-dim); font-size:14px; margin-bottom:28px;}
+.field{margin-bottom:18px;}
+.field label{display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--steel); margin-bottom:8px;}
+.field input, .field textarea, .field select{
+  width:100%; background:#FFFFFF; border:1px solid var(--line-bright); border-radius:var(--radius-sm);
+  padding:11px 14px; color:var(--paper); font-family:var(--sans); font-size:14.5px;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.field input:focus, .field textarea:focus, .field select:focus{
+  outline:none; border-color:var(--brass-bright); box-shadow:0 0 0 3px rgba(232,103,74,0.15);
+}
+.field textarea{resize:vertical; min-height:78px; font-family:var(--mono); font-size:13px; line-height:1.6;}
+.field .hint{font-size:12px; color:var(--steel); margin-top:6px;}
+.form-error{
+  background:rgba(244,114,182,0.1); border:1px solid rgba(244,114,182,0.4); color:var(--rose);
+  border-radius:var(--radius-sm); padding:10px 14px; font-size:13.5px; margin-bottom:18px; display:none;
+}
+.form-error.show{display:block;}
+
+/* ---------- Dashboard top bar ---------- */
+.admin-topbar{
+  display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  margin-bottom:32px; padding-bottom:20px; border-bottom:1px solid var(--line);
+}
+.admin-topbar .who{font-size:13.5px; color:var(--paper-dim);}
+.admin-topbar .who b{color:var(--paper);}
+
+/* ---------- Tabs ---------- */
+.admin-tabs{display:flex; gap:10px; margin-bottom:28px; flex-wrap:wrap;}
+.admin-tab{
+  font-family:var(--mono); font-size:13px; border:1px solid var(--line); background:var(--grad-card);
+  color:var(--paper-dim); padding:10px 20px; border-radius:var(--radius-pill); cursor:pointer;
+  transition:all .2s ease;
+}
+.admin-tab:hover{border-color:var(--brass-bright); color:var(--paper);}
+.admin-tab.active{background:var(--grad-primary); color:#fff; border-color:transparent; box-shadow:0 4px 18px rgba(232,103,74,0.35);}
+
+.admin-panel{display:none;}
+.admin-panel.active{display:block;}
+
+/* ---------- Panel header / add button ---------- */
+.panel-head{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:20px; flex-wrap:wrap;}
+.panel-head h2{font-size:20px;}
+.panel-head .count{color:var(--steel); font-family:var(--mono); font-size:12.5px;}
+
+/* ---------- Data table ---------- */
+.admin-table-wrap{
+  border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+  background:var(--grad-card); margin-bottom:36px;
+}
+table.admin-table{width:100%; border-collapse:collapse; font-size:14px;}
+table.admin-table th{
+  text-align:left; font-family:var(--mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--steel); padding:14px 16px; border-bottom:1px solid var(--line-bright);
+  background:linear-gradient(90deg, rgba(232,103,74,0.10), rgba(247,183,51,0.06));
+}
+table.admin-table td{padding:14px 16px; border-bottom:1px solid var(--line); color:var(--paper-dim); vertical-align:top;}
+table.admin-table tr:last-child td{border-bottom:none;}
+table.admin-table tr:hover td{background:rgba(232,103,74,0.05);}
+table.admin-table td.name-cell{color:var(--paper); font-weight:600;}
+table.admin-table td.rank-cell{font-family:var(--mono); color:var(--brass-bright); font-weight:700;}
+table.admin-table .row-actions{display:flex; gap:8px; white-space:nowrap;}
+.empty-row td{text-align:center; color:var(--steel); padding:32px 16px; font-style:italic;}
+
+/* ---------- Edit/add form card ---------- */
+.form-card{
+  border:1px solid var(--line-bright); border-radius:var(--radius); background:var(--grad-card);
+  padding:28px; margin-bottom:36px; display:none; box-shadow:var(--glow-soft);
+}
+.form-card.open{display:block;}
+.form-card h3{font-size:17px; margin-bottom:20px;}
+.form-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px 20px;}
+.form-grid .field.full{grid-column:1 / -1;}
+@media (max-width:640px){.form-grid{grid-template-columns:1fr;}}
+.form-actions{display:flex; gap:12px; margin-top:8px; flex-wrap:wrap;}
+
+.btn-danger{background:rgba(244,114,182,0.12); color:var(--rose); border:1px solid rgba(244,114,182,0.4);}
+.btn-danger:hover{background:rgba(244,114,182,0.2);}
+
+.toast{
+  position:fixed; bottom:24px; right:24px; z-index:100;
+  background:var(--grad-primary); color:#fff; padding:14px 22px; border-radius:var(--radius-sm);
+  font-size:14px; font-weight:600; box-shadow:0 8px 30px rgba(232,103,74,0.4);
+  transform:translateY(20px); opacity:0; pointer-events:none; transition:all .3s ease;
+}
+.toast.show{transform:translateY(0); opacity:1;}
+.toast.error{background:linear-gradient(135deg,#F472B6,#EC4899);}
