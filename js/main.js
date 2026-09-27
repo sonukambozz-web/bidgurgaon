@@ -387,13 +387,49 @@ const GGN = (() => {
     const linkBase = opts.fromPages ? '' : 'pages/';
     const projectsById = opts.projectsById || {};
     const activeOn = cp.activeOn || [];
-    const chips = activeOn.map(pid => {
+
+    // Prioritize premier flagship launches (DLF Privana, Godrej Verano, Lodha) so top marquee launches appear first
+    const marqueePrio = ['dlf-privana-enclave', 'godrej-verano', 'lodha-golf-course-road', 'm3m-soulitude-central'];
+    const sortedActiveOn = [...activeOn].sort((a, b) => {
+      const idxA = marqueePrio.indexOf(a);
+      const idxB = marqueePrio.indexOf(b);
+      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+      if (idxA !== -1) return -1;
+      if (idxB !== -1) return 1;
+      return 0;
+    });
+
+    const maxVisible = 3;
+    const isTruncated = sortedActiveOn.length > 4;
+    const visiblePids = isTruncated ? sortedActiveOn.slice(0, maxVisible) : sortedActiveOn;
+    const hiddenPids = isTruncated ? sortedActiveOn.slice(maxVisible) : [];
+
+    const renderChip = (pid) => {
       const project = projectsById[pid];
       const label = project ? project.name : pid;
       return project
         ? `<a class="chip-project" href="${detailHref('project', pid, opts)}">${label}</a>`
         : `<span class="chip-project chip-project--unresolved" title="Project id not found">${label}</span>`;
-    }).join('');
+    };
+
+    const visibleChips = visiblePids.map(renderChip).join('');
+    const hiddenChips = hiddenPids.map(renderChip).join('');
+
+    const toggleBtn = isTruncated
+      ? `<button type="button" class="chip-expand-btn" data-more-text="+${hiddenPids.length} more projects ▾" data-less-text="Show fewer ▴" aria-expanded="false" onclick="GGN.togglePartnerChips(this)">+${hiddenPids.length} more projects ▾</button>`
+      : '';
+
+    const hiddenBox = isTruncated
+      ? `<div class="active-projects-hidden">${hiddenChips}</div>`
+      : '';
+
+    const chipsMarkup = activeOn.length
+      ? `<div class="active-projects-wrap">
+          <div class="active-projects">${visibleChips}${toggleBtn}</div>
+          ${hiddenBox}
+        </div>`
+      : '';
+
     const gap = cp.gapAbove == null
       ? '<span class="bid-gap">Top of the board</span>'
       : `<span class="bid-gap">${fmtINR(cp.gapAbove)} behind #${cp.position - 1}</span>`;
@@ -405,7 +441,7 @@ const GGN = (() => {
         <div class="name-block">
           <div class="name"><a href="${detailHref('partner', cp.id, opts)}" class="entity-name-link">${cp.name}</a> <span class="badge-rera">RERA ✓</span></div>
           <div class="meta">Active on ${activeOn.length} project${activeOn.length === 1 ? '' : 's'} · ${cp.reraChannel}</div>
-          ${activeOn.length ? `<div class="active-projects">${chips}</div>` : ''}
+          ${chipsMarkup}
           <a class="profile-link" href="${detailHref('partner', cp.id, opts)}">View full profile →</a>
         </div>
       </div>
@@ -416,6 +452,26 @@ const GGN = (() => {
         <a class="btn btn-call btn-sm" href="tel:${String(cp.phone || '').replace(/\s/g, '')}">Call now</a>
       </div>
     </div>`;
+  }
+
+  function togglePartnerChips(btn) {
+    if (!btn) return;
+    const wrap = btn.closest('.active-projects-wrap');
+    if (!wrap) return;
+    const hiddenBox = wrap.querySelector('.active-projects-hidden');
+    if (!hiddenBox) return;
+    const isOpen = hiddenBox.classList.contains('is-open');
+    if (isOpen) {
+      hiddenBox.classList.remove('is-open');
+      btn.classList.remove('is-active');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = btn.getAttribute('data-more-text') || '+more ▾';
+    } else {
+      hiddenBox.classList.add('is-open');
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.textContent = btn.getAttribute('data-less-text') || 'Show fewer ▴';
+    }
   }
 
   /* ---------------- Ticker board effect ----------------
@@ -1338,8 +1394,17 @@ const GGN = (() => {
     renderMarketPulse, marketOf, positionOf,
     renderProjectGrid, initProjectFilters, applySiteContent, fillLiveDevStats, fillLiveDevProjects, buildDevIndex,
     detailHref, entityId, applyEntitySeo,
-    renderDeveloperDetail, renderProjectDetail, renderPartnerDetail, init
+    renderDeveloperDetail, renderProjectDetail, renderPartnerDetail,
+    togglePartnerChips, init
   };
 })();
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.chip-expand-btn');
+  if (btn && window.GGN && typeof window.GGN.togglePartnerChips === 'function') {
+    e.preventDefault();
+    window.GGN.togglePartnerChips(btn);
+  }
+});
 
 document.addEventListener('DOMContentLoaded', GGN.init);

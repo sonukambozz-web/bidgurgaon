@@ -425,7 +425,8 @@ p { margin: 0; }
 }
 .board-row.rank-1 .bid-gap { color: var(--gold-dark); }
 
-.active-projects { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.active-projects-wrap { margin-top: 6px; }
+.active-projects { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .chip-project {
   font-size: 11px; font-weight: 600; line-height: 1.2;
   color: var(--slate); background: var(--bg-soft);
@@ -434,6 +435,34 @@ p { margin: 0; }
 }
 a.chip-project:hover { background: #FFFFFF; border-color: var(--gold); color: var(--ink); }
 .chip-project--unresolved { color: var(--muted); font-style: italic; }
+
+.chip-expand-btn {
+  font-family: var(--font-body); font-size: 11px; font-weight: 700; line-height: 1.2;
+  color: #8C6D1F; background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.45); border-radius: 999px;
+  padding: 3px 10px; cursor: pointer; transition: all 0.2s ease;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.chip-expand-btn:hover {
+  background: var(--gold); color: #0B0F19; border-color: var(--gold);
+  box-shadow: 0 2px 8px rgba(201, 168, 76, 0.25); transform: translateY(-1px);
+}
+.chip-expand-btn.is-active {
+  background: var(--ink); color: #FAF9F6; border-color: var(--ink);
+}
+
+.active-projects-hidden {
+  display: none; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+  padding: 10px 12px; background: rgba(201, 168, 76, 0.04);
+  border: 1px dashed rgba(201, 168, 76, 0.35); border-radius: 10px;
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.active-projects-hidden.is-open { display: flex; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 .board-foot {
   padding: 16px 24px; border-top: 1px solid var(--line);
