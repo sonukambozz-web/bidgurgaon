@@ -12,44 +12,13 @@
   },
   "developers": [
     {
-      "rank": 0,
-      "id": "signature-global",
-      "name": "Signature Global (India) Ltd.",
-      "rera": "N/A — registered per-project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "SG",
-      "locality": "Multiple — Dwarka Expressway, Sohna Road, Sector 37D/71/84, SPR",
-      "tagline": "One of Gurugram's largest builders — 52+ projects, 19.2M sq.ft. delivered.",
-      "projects": [
-        "tonino-lamborghini-residences"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "m3m-india",
-      "name": "M3M India Pvt. Ltd.",
-      "rera": "N/A — registered per-project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "M3M",
-      "locality": "Multiple — Golf Course Rd Extn., Sohna Rd, Sector 65-113",
-      "tagline": "One of India's fastest-growing real estate conglomerates, spanning residential, retail, office & serviced apartments.",
-      "projects": [
-        "m3m-soulitude-central",
-        "m3m-capital-financial-centre"
-      ]
-    },
-    {
-      "rank": 0,
+      "rank": 1,
       "id": "dlf-limited",
       "name": "DLF Limited",
-      "rera": "N/A — registered per-project",
-      "bidAmount": 0,
+      "rera": "HRERA Registered per project",
+      "bidAmount": 28000,
       "bidCycle": "month",
-      "since": "",
+      "since": "2024-01-10",
       "logo": "DLF",
       "locality": "Multiple — Golf Course Rd, Golf Course Extn. Rd, SPR (Sectors 63, 76, 77)",
       "tagline": "India's largest listed real estate developer — 78+ years, 112 residential projects completed.",
@@ -58,229 +27,260 @@
       ]
     },
     {
-      "rank": 0,
+      "rank": 2,
       "id": "godrej-properties",
       "name": "Godrej Properties Limited",
-      "rera": "N/A — registered per-project",
-      "bidAmount": 0,
+      "rera": "HRERA Registered per project",
+      "bidAmount": 26500,
       "bidCycle": "month",
-      "since": "",
+      "since": "2024-01-15",
       "logo": "GP",
-      "locality": "Multiple — Golf Course Rd, Sector 43, New Gurgaon, Sector 79/89",
-      "tagline": "India's largest listed residential real estate developer by booking value (2025) — part of the 127-year Godrej Group.",
+      "locality": "Multiple — Golf Course Rd, Sector 43, Sector 53, Sector 63A",
+      "tagline": "India's largest listed residential developer by booking value (2025) — 127-year Godrej Group.",
       "projects": [
         "godrej-verano",
         "godrej-samaris"
       ]
     },
     {
-      "rank": 0,
-      "id": "1000-trees-housing-private-limited",
-      "name": "1000 Trees Housing Private Limited",
-      "rera": "Registered per project",
-      "bidAmount": 0,
+      "rank": 3,
+      "id": "m3m-india",
+      "name": "M3M India Pvt. Ltd.",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 25000,
       "bidCycle": "month",
-      "since": "",
-      "logo": "1T",
-      "locality": "Sector 105, Near Daulatabad Flyover, Dwarka Expressway",
-      "tagline": "Leading real estate developer in Gurugram.",
+      "since": "2024-02-01",
+      "logo": "M3M",
+      "locality": "Multiple — Golf Course Rd Extn., Sohna Rd, Sector 65-113, Dwarka Expressway",
+      "tagline": "One of India's fastest-growing luxury conglomerates across residential, retail & commercial.",
       "projects": [
-        "the-grove-at-sanctuary"
+        "m3m-soulitude-central",
+        "m3m-capital-financial-centre"
       ]
     },
     {
-      "rank": 0,
-      "id": "birla-estates-private-limited",
-      "name": "Birla Estates Private Limited",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "BE",
-      "locality": "Sector 31-32A, Heart of Central Gurugram",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "birla-arika-phase-2"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "dvok-buildcon-llp-suncity",
-      "name": "Dvok Buildcon LLP / Suncity",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "DB",
-      "locality": "Sector 78, Shikopur, Foothill Enclave, Gurugram",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "suncity-monarch-residences"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "bptp-limited",
-      "name": "BPTP Limited",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "B",
-      "locality": "Sector 70A, Southern Peripheral Road, Gurugram",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "bptp-green-oaks-boulevard"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "greatvalue-hpl-infratech-ats",
-      "name": "Greatvalue HPL Infratech / ATS",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "GH",
-      "locality": "Sector 104, Village Dhanwapur, Dwarka Expressway",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "ats-triumph-villas"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "floralessence-projects-aipl",
-      "name": "Floralessence Projects / AIPL",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "FP",
-      "locality": "Sector 103, Village Daulatabad, Dwarka Expressway",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "aquaria-at-aipl-lake-city"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "krisumi-corporation-pvt-ltd-sumitomo-japan",
-      "name": "Krisumi Corporation Pvt. Ltd. (Sumitomo Japan)",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "KP",
-      "locality": "Sector 36A, CPR / Dwarka Expressway, Gurugram",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "krisumi-city-phase-7"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "adani-m2k-realtors-llp",
-      "name": "Adani M2K Realtors LLP",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "AM",
-      "locality": "Sector 102 & 102A, Dwarka Expressway, Gurugram",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "the-marq"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "puri-construction-pvt-ltd",
-      "name": "Puri Construction PVT LTD",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "PC",
-      "locality": "Sector 111, Dwarka Expressway (Delhi Border)",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "puri-aerosphere"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "anant-raj-limited",
-      "name": "Anant Raj Limited",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "AR",
-      "locality": "Sector 63A, Golf Course Extension, Gurugram",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "the-estate-one"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "emaar-india-limited",
-      "name": "Emaar India Limited",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "EI",
-      "locality": "Sector 66, Golf Course Extension Road, Gurugram",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "marbella-terraces"
-      ]
-    },
-    {
-      "rank": 0,
-      "id": "sobha-limited",
-      "name": "Sobha Limited",
-      "rera": "Registered per project",
-      "bidAmount": 0,
-      "bidCycle": "month",
-      "since": "",
-      "logo": "S",
-      "locality": "Sector 63A, Gurugram Manesar Urban Complex",
-      "tagline": "Leading real estate developer in Gurugram.",
-      "projects": [
-        "sobha-crescent-phase-1"
-      ]
-    },
-    {
-      "rank": 0,
+      "rank": 4,
       "id": "oberoi-realty-limited",
       "name": "Oberoi Realty Limited",
-      "rera": "Registered per project",
-      "bidAmount": 0,
+      "rera": "HRERA Registered per project",
+      "bidAmount": 23500,
       "bidCycle": "month",
-      "since": "",
+      "since": "2024-02-15",
       "logo": "OR",
-      "locality": "Sector 58, Golf Course Extension, Gurugram",
-      "tagline": "Leading real estate developer in Gurugram.",
+      "locality": "Sector 58, Golf Course Extension Road, Gurugram",
+      "tagline": "Mumbai's ultra-luxury benchmark developer making its landmark NCR debut.",
       "projects": [
         "three-sixty-north"
       ]
     },
     {
-      "rank": 0,
+      "rank": 5,
       "id": "lodha-developers-limited",
       "name": "Lodha Developers Limited",
-      "rera": "Registered per project",
-      "bidAmount": 0,
+      "rera": "HRERA Registered per project",
+      "bidAmount": 22000,
       "bidCycle": "month",
-      "since": "",
+      "since": "2024-03-01",
       "logo": "LD",
       "locality": "Sector 28, Golf Course Road, Gurugram",
-      "tagline": "Leading real estate developer in Gurugram.",
+      "tagline": "India's No. 1 luxury developer, creator of world-class branded residences.",
       "projects": [
         "lodha-golf-course-road"
+      ]
+    },
+    {
+      "rank": 6,
+      "id": "signature-global",
+      "name": "Signature Global (India) Ltd.",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 20500,
+      "bidCycle": "month",
+      "since": "2024-03-15",
+      "logo": "SG",
+      "locality": "Multiple — Dwarka Expressway, Sohna Road, Sector 37D/71/84, SPR",
+      "tagline": "BSE & NSE listed real estate leader delivering world-class luxury developments.",
+      "projects": [
+        "tonino-lamborghini-residences"
+      ]
+    },
+    {
+      "rank": 7,
+      "id": "krisumi-corporation-pvt-ltd-sumitomo-japan",
+      "name": "Krisumi Corporation Pvt. Ltd. (Sumitomo Japan)",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 19500,
+      "bidCycle": "month",
+      "since": "2024-04-01",
+      "logo": "KC",
+      "locality": "Sector 36A, Dwarka Expressway & CPR, Gurugram",
+      "tagline": "A flagship partnership of Krishna Group and Japan's Fortune 500 Sumitomo Corporation.",
+      "projects": [
+        "krisumi-city-phase-7"
+      ]
+    },
+    {
+      "rank": 8,
+      "id": "birla-estates-private-limited",
+      "name": "Birla Estates Private Limited",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 18500,
+      "bidCycle": "month",
+      "since": "2024-04-15",
+      "logo": "BE",
+      "locality": "Sector 31, Central Gurugram",
+      "tagline": "The real estate arm of Century Textiles and Industries, Aditya Birla Group.",
+      "projects": [
+        "birla-arika-phase-2"
+      ]
+    },
+    {
+      "rank": 9,
+      "id": "sobha-limited",
+      "name": "Sobha Limited",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 17500,
+      "bidCycle": "month",
+      "since": "2024-05-01",
+      "logo": "SL",
+      "locality": "Sector 108, Dwarka Expressway, Gurugram",
+      "tagline": "India's only backward integrated real estate company, celebrated for uncompromised quality.",
+      "projects": [
+        "sobha-crescent-phase-1"
+      ]
+    },
+    {
+      "rank": 10,
+      "id": "emaar-india-limited",
+      "name": "Emaar India Limited",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 16500,
+      "bidCycle": "month",
+      "since": "2024-05-15",
+      "logo": "EM",
+      "locality": "Sector 66, Golf Course Extension Road, Gurugram",
+      "tagline": "Pioneering master-planned communities and iconic luxury living in Gurugram.",
+      "projects": [
+        "marbella-terraces"
+      ]
+    },
+    {
+      "rank": 11,
+      "id": "adani-m2k-realtors-llp",
+      "name": "Adani M2K Realtors LLP",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 15500,
+      "bidCycle": "month",
+      "since": "2024-06-01",
+      "logo": "AM",
+      "locality": "Sector 2, Dwarka Expressway, Gurugram",
+      "tagline": "A prestigious joint venture creating luxury architectural landmarks in Gurugram.",
+      "projects": [
+        "the-marq"
+      ]
+    },
+    {
+      "rank": 12,
+      "id": "puri-construction-pvt-ltd",
+      "name": "Puri Construction PVT LTD",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 14500,
+      "bidCycle": "month",
+      "since": "2024-06-15",
+      "logo": "PC",
+      "locality": "Sector 111, Dwarka Expressway, Gurugram",
+      "tagline": "Delivering bespoke luxury developments with immaculate delivery track records.",
+      "projects": [
+        "puri-aerosphere"
+      ]
+    },
+    {
+      "rank": 13,
+      "id": "anant-raj-limited",
+      "name": "Anant Raj Limited",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 13500,
+      "bidCycle": "month",
+      "since": "2024-07-01",
+      "logo": "AR",
+      "locality": "Sector 63A, Golf Course Extension Road, Gurugram",
+      "tagline": "One of Delhi NCR's pioneer luxury developers with over 50 years of excellence.",
+      "projects": [
+        "the-estate-one"
+      ]
+    },
+    {
+      "rank": 14,
+      "id": "bptp-limited",
+      "name": "BPTP Limited",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 12500,
+      "bidCycle": "month",
+      "since": "2024-07-15",
+      "logo": "BP",
+      "locality": "Sector 70A, Southern Peripheral Road, Gurugram",
+      "tagline": "A leading infrastructure and real estate conglomerate in the National Capital Region.",
+      "projects": [
+        "bptp-green-oaks-boulevard"
+      ]
+    },
+    {
+      "rank": 15,
+      "id": "floralessence-projects-aipl",
+      "name": "Floralessence Projects / AIPL",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 11500,
+      "bidCycle": "month",
+      "since": "2024-08-01",
+      "logo": "AIPL",
+      "locality": "Sector 88, Dwarka Expressway, Gurugram",
+      "tagline": "AIPL — crafting premium residential and commercial destinations across NCR.",
+      "projects": [
+        "aquaria-at-aipl-lake-city"
+      ]
+    },
+    {
+      "rank": 16,
+      "id": "dvok-buildcon-llp-suncity",
+      "name": "Dvok Buildcon LLP / Suncity",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 10500,
+      "bidCycle": "month",
+      "since": "2024-08-15",
+      "logo": "SC",
+      "locality": "Sector 78, Southern Peripheral Road, Gurugram",
+      "tagline": "Renowned luxury developer behind some of Gurugram's finest residential enclaves.",
+      "projects": [
+        "suncity-monarch-residences"
+      ]
+    },
+    {
+      "rank": 17,
+      "id": "greatvalue-hpl-infratech-ats",
+      "name": "Greatvalue HPL Infratech / ATS",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 9500,
+      "bidCycle": "month",
+      "since": "2024-09-01",
+      "logo": "ATS",
+      "locality": "Sector 104, Dwarka Expressway, Gurugram",
+      "tagline": "Synonymous with quality construction, timeless aesthetics and architectural craftsmanship.",
+      "projects": [
+        "ats-triumph-villas"
+      ]
+    },
+    {
+      "rank": 18,
+      "id": "1000-trees-housing-private-limited",
+      "name": "1000 Trees Housing Private Limited",
+      "rera": "HRERA Registered per project",
+      "bidAmount": 8500,
+      "bidCycle": "month",
+      "since": "2024-09-15",
+      "logo": "1T",
+      "locality": "Sector 105, Dwarka Expressway, Gurugram",
+      "tagline": "Developers of ultra-luxury nature-infused residences on Dwarka Expressway.",
+      "projects": [
+        "the-grove-at-sanctuary"
       ]
     }
   ],
@@ -332,21 +332,21 @@
       "name": "Skyline Realty Partners",
       "bidAmount": 165000,
       "bidCycle": "month",
-      "since": "2026-04-01",
+      "since": "2024-04-01",
       "phone": "+91 98XXX XXXXX",
       "whatsapp": "+91 98XXX XXXXX",
       "reraChannel": "RERA-HRY-CP-0231",
       "activeOn": [
-        "sarvam",
-        "m3m-altitude",
-        "dlf-the-arbour"
+        "dlf-privana-enclave",
+        "godrej-verano",
+        "m3m-soulitude-central"
       ],
       "experienceYears": 9,
       "photo": "",
       "tagline": "Luxury residences specialist, Golf Course Road & Dwarka Expressway",
       "specialization": "Luxury apartments, Investment advisory",
       "languages": "English, Hindi",
-      "bio": "Skyline Realty Partners has closed over 300 transactions across Gurugram's premium micro-markets since 2016, with a focus on Golf Course Road Extension and Dwarka Expressway. The team works directly with a small set of RERA-certified developers rather than spreading thin across the market, so buyers get deep, current knowledge of each project's construction stage, inventory and pricing movement."
+      "bio": "Skyline Realty Partners has closed over 300 transactions across Gurugram's premium micro-markets since 2016, with a focus on Golf Course Road Extension and Dwarka Expressway."
     },
     {
       "rank": 3,
@@ -354,82 +354,21 @@
       "name": "NorthStar Property Advisors",
       "bidAmount": 142000,
       "bidCycle": "month",
-      "since": "2026-02-18",
+      "since": "2024-05-18",
       "phone": "+91 98XXX XXXXX",
       "whatsapp": "+91 98XXX XXXXX",
       "reraChannel": "RERA-HRY-CP-0198",
       "activeOn": [
-        "godrej-meridien",
-        "m3m-golf-hills"
+        "the-grove-at-sanctuary",
+        "birla-arika-phase-2",
+        "tonino-lamborghini-residences"
       ],
       "experienceYears": 6,
       "photo": "",
       "tagline": "End-user homes, Sohna Road & New Gurugram",
       "specialization": "Mid-segment apartments, End-user homebuying",
       "languages": "English, Hindi, Punjabi",
-      "bio": "NorthStar Property Advisors focuses on first-time and end-user buyers looking in Sohna Road and New Gurugram — helping compare configurations, possession timelines and home-loan eligibility across a handful of actively tracked projects, rather than pushing whichever project pays the highest commission."
-    },
-    {
-      "rank": 4,
-      "id": "capital-square",
-      "name": "Capital Square Realtors",
-      "bidAmount": 118000,
-      "bidCycle": "month",
-      "since": "2025-12-05",
-      "phone": "+91 98XXX XXXXX",
-      "whatsapp": "+91 98XXX XXXXX",
-      "reraChannel": "RERA-HRY-CP-0176",
-      "activeOn": [
-        "dlf-privana-south",
-        "godrej-101"
-      ],
-      "experienceYears": 12,
-      "photo": "",
-      "tagline": "Investment-grade real estate across Gurugram",
-      "specialization": "Investment advisory, NRI transactions",
-      "languages": "English, Hindi, Gujarati",
-      "bio": "Capital Square Realtors has advised on real estate investment in Gurugram since 2013, with particular depth in NRI transactions and portfolio-style multi-unit purchases. Every project represented has been personally site-visited by the team before being added to their active list."
-    },
-    {
-      "rank": 5,
-      "id": "primehome-consultants",
-      "name": "PrimeHome Consultants",
-      "bidAmount": 96000,
-      "bidCycle": "month",
-      "since": "2026-05-22",
-      "phone": "+91 98XXX XXXXX",
-      "whatsapp": "+91 98XXX XXXXX",
-      "reraChannel": "RERA-HRY-CP-0304",
-      "activeOn": [
-        "twin-tower-dxp"
-      ],
-      "experienceYears": 4,
-      "photo": "",
-      "tagline": "New launches on Dwarka Expressway",
-      "specialization": "New launches, 3 & 4 BHK residences",
-      "languages": "English, Hindi",
-      "bio": "PrimeHome Consultants tracks new launches on Dwarka Expressway closely, often meeting buyers on-site during the pre-launch and early booking window when floor selection and payment plans are most flexible."
-    },
-    {
-      "rank": 6,
-      "id": "urban-nest",
-      "name": "Urban Nest Advisory",
-      "bidAmount": 74000,
-      "bidCycle": "month",
-      "since": "2026-06-30",
-      "phone": "+91 98XXX XXXXX",
-      "whatsapp": "+91 98XXX XXXXX",
-      "reraChannel": "RERA-HRY-CP-0355",
-      "activeOn": [
-        "dlf-the-camellias",
-        "godrej-aria"
-      ],
-      "experienceYears": 7,
-      "photo": "",
-      "tagline": "Family homes, Golf Course Road & Sector 150",
-      "specialization": "Villas, Independent floors, Family homes",
-      "languages": "English, Hindi",
-      "bio": "Urban Nest Advisory works primarily with families relocating within or into Gurugram, with a preference for villa and independent-floor formats over high-rise apartments. The team offers site visits on weekends and coordinates directly with developer sales offices to speed up paperwork."
+      "bio": "NorthStar Property Advisors focuses on end-user buyers looking across Gurugram's active growth corridors."
     }
   ],
   "projects": [
