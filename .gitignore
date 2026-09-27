@@ -12,6 +12,7 @@ firebase-debug.*.log*
 
 # Local workspace configs
 .claude/
+*.bak
 
 # Firebase config
 

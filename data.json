@@ -144,6 +144,216 @@
         "godrej-sora",
         "godrej-samaris"
       ]
+    },
+    {
+      "rank": 0,
+      "id": "1000-trees-housing-private-limited",
+      "name": "1000 Trees Housing Private Limited",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "1T",
+      "locality": "Sector 105, Near Daulatabad Flyover, Dwarka Expressway",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "the-grove-at-sanctuary"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "birla-estates-private-limited",
+      "name": "Birla Estates Private Limited",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "BE",
+      "locality": "Sector 31-32A, Heart of Central Gurugram",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "birla-arika-phase-2"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "dvok-buildcon-llp-suncity",
+      "name": "Dvok Buildcon LLP / Suncity",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "DB",
+      "locality": "Sector 78, Shikopur, Foothill Enclave, Gurugram",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "suncity-monarch-residences"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "bptp-limited",
+      "name": "BPTP Limited",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "B",
+      "locality": "Sector 70A, Southern Peripheral Road, Gurugram",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "bptp-green-oaks-boulevard"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "greatvalue-hpl-infratech-ats",
+      "name": "Greatvalue HPL Infratech / ATS",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "GH",
+      "locality": "Sector 104, Village Dhanwapur, Dwarka Expressway",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "ats-triumph-villas"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "floralessence-projects-aipl",
+      "name": "Floralessence Projects / AIPL",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "FP",
+      "locality": "Sector 103, Village Daulatabad, Dwarka Expressway",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "aquaria-at-aipl-lake-city"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "krisumi-corporation-pvt-ltd-sumitomo-japan",
+      "name": "Krisumi Corporation Pvt. Ltd. (Sumitomo Japan)",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "KP",
+      "locality": "Sector 36A, CPR / Dwarka Expressway, Gurugram",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "krisumi-city-phase-7"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "adani-m2k-realtors-llp",
+      "name": "Adani M2K Realtors LLP",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "AM",
+      "locality": "Sector 102 & 102A, Dwarka Expressway, Gurugram",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "the-marq"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "puri-construction-pvt-ltd",
+      "name": "Puri Construction PVT LTD",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "PC",
+      "locality": "Sector 111, Dwarka Expressway (Delhi Border)",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "puri-aerosphere"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "anant-raj-limited",
+      "name": "Anant Raj Limited",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "AR",
+      "locality": "Sector 63A, Golf Course Extension, Gurugram",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "the-estate-one"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "emaar-india-limited",
+      "name": "Emaar India Limited",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "EI",
+      "locality": "Sector 66, Golf Course Extension Road, Gurugram",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "marbella-terraces"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "sobha-limited",
+      "name": "Sobha Limited",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "S",
+      "locality": "Sector 63A, Gurugram Manesar Urban Complex",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "sobha-crescent-phase-1"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "oberoi-realty-limited",
+      "name": "Oberoi Realty Limited",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "OR",
+      "locality": "Sector 58, Golf Course Extension, Gurugram",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "three-sixty-north"
+      ]
+    },
+    {
+      "rank": 0,
+      "id": "lodha-developers-limited",
+      "name": "Lodha Developers Limited",
+      "rera": "Registered per project",
+      "bidAmount": 0,
+      "bidCycle": "month",
+      "since": "",
+      "logo": "LD",
+      "locality": "Sector 28, Golf Course Road, Gurugram",
+      "tagline": "Leading real estate developer in Gurugram.",
+      "projects": [
+        "lodha-golf-course-road"
+      ]
     }
   ],
   "channelPartners": [
@@ -1231,15 +1441,460 @@
       "id": "godrej-samaris",
       "name": "Godrej Samaris",
       "developerId": "godrej-properties",
-      "locality": "Gurugram",
-      "status": "",
-      "possession": "",
-      "configs": "",
-      "sizeRange": "",
-      "priceRange": "",
-      "rera": "",
-      "summary": "",
-      "highlights": [],
+      "locality": "Sector 53, Urban Estate, DLF Phase 5, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2032",
+      "configs": "3 & 4 BHK Ultra-Luxury Waterfront Suites",
+      "sizeRange": "2,950 – 4,400 sq.ft.",
+      "priceRange": "₹ 7.8 Cr Onwards",
+      "rera": "GGM/1059/791/2026/31",
+      "summary": "Premium 3 & 4 BHK Ultra-Luxury Waterfront Suites by Godrej Properties Limited in Sector 53, Urban Estate, DLF Phase 5, Gurugram. Key highlights: HRERA 2026 Verified, DLF 5 Micro-Market, Thermal Infinity Pool.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "DLF 5 Micro-Market",
+        "Thermal Infinity Pool",
+        "Zero Surface Traffic"
+      ],
+      "activePartners": [],
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjA5MQ==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3890",
+      "coverImage": "https://spyrealtors.in/projects/godrej-samaris.jpg"
+    },
+    {
+      "id": "the-grove-at-sanctuary",
+      "name": "The Grove at Sanctuary",
+      "developerId": "1000-trees-housing-private-limited",
+      "locality": "Sector 105, Near Daulatabad Flyover, Dwarka Expressway",
+      "status": "Hot Launch",
+      "possession": "2028",
+      "configs": "Low-Rise Luxury Plotted Floors & Villas",
+      "sizeRange": "1,750 – 2,600 sq.ft.",
+      "priceRange": "₹ 2.45 Cr Onwards",
+      "rera": "GGM/1040/772/2026/12",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjEwOA==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3866",
+      "coverImage": "https://spyrealtors.in/projects/the-grove-at-sanctuary.jpg",
+      "summary": "Premium Low-Rise Luxury Plotted Floors & Villas by 1000 Trees Housing Private Limited in Sector 105, Near Daulatabad Flyover, Dwarka Expressway. Key highlights: HRERA 2026 Verified, Fast Possession 2028, 1000+ Native Trees.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Fast Possession 2028",
+        "1000+ Native Trees",
+        "Stilt + 4 Gated Community"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "birla-arika-phase-2",
+      "name": "Birla Arika Phase 2",
+      "developerId": "birla-estates-private-limited",
+      "locality": "Sector 31-32A, Heart of Central Gurugram",
+      "status": "Hot Launch",
+      "possession": "2031",
+      "configs": "LifeDesigned Ultra-Luxury Family Suites",
+      "sizeRange": "2,850 – 4,200 sq.ft.",
+      "priceRange": "₹ 6.2 Cr Onwards",
+      "rera": "GGM/1044/776/2026/16",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MTQxNg==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3872",
+      "coverImage": "https://spyrealtors.in/projects/birla-arika-phase-2.jpg",
+      "summary": "Premium LifeDesigned Ultra-Luxury Family Suites by Birla Estates Private Limited in Sector 31-32A, Heart of Central Gurugram. Key highlights: HRERA 2026 Verified, Heart of City Location, Birla Legacy & Quality.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Heart of City Location",
+        "Birla Legacy & Quality",
+        "Near HUDA City Centre"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "m3m-soulitude-central",
+      "name": "M3M Soulitude Central",
+      "developerId": "m3m-india",
+      "locality": "Sector 89, New Gurgaon Corridor",
+      "status": "Hot Launch",
+      "possession": "2030",
+      "configs": "Low-Rise Boutique Luxury Living",
+      "sizeRange": "1,550 – 2,400 sq.ft.",
+      "priceRange": "₹ 1.85 Cr Onwards",
+      "rera": "GGM/1041/773/2026/13",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjExNg==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3869",
+      "coverImage": "https://spyrealtors.in/projects/m3m-soulitude-central.jpg",
+      "summary": "Premium Low-Rise Boutique Luxury Living by Aawam Residency / M3M India in Sector 89, New Gurgaon Corridor. Key highlights: HRERA 2026 Verified, Boutique Low-Rise Format, Private Basement Office.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Boutique Low-Rise Format",
+        "Private Basement Office",
+        "Terrace Garden Access"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "suncity-monarch-residences",
+      "name": "Suncity Monarch Residences",
+      "developerId": "dvok-buildcon-llp-suncity",
+      "locality": "Sector 78, Shikopur, Foothill Enclave, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2031",
+      "configs": "3 & 4 BHK Mountain-View High-Rises",
+      "sizeRange": "2,200 – 3,300 sq.ft.",
+      "priceRange": "₹ 3.25 Cr Onwards",
+      "rera": "GGM/1037/769/2026/09",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjA4OA==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3863",
+      "coverImage": "https://spyrealtors.in/projects/suncity-monarch-residences.jpg",
+      "summary": "Premium 3 & 4 BHK Mountain-View High-Rises by Dvok Buildcon LLP / Suncity in Sector 78, Shikopur, Foothill Enclave, Gurugram. Key highlights: HRERA 2026 Verified, Foothill Clean Air Zone, NH-48 Immediate Exit.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Foothill Clean Air Zone",
+        "NH-48 Immediate Exit",
+        "Sky Lounge & Observatory"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "bptp-green-oaks-boulevard",
+      "name": "BPTP Green Oaks Boulevard",
+      "developerId": "bptp-limited",
+      "locality": "Sector 70A, Southern Peripheral Road, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2031",
+      "configs": "Premium Gated Plotted Floors & Suites",
+      "sizeRange": "1,850 – 2,750 sq.ft.",
+      "priceRange": "₹ 2.65 Cr Onwards",
+      "rera": "GGM/1062/794/2026/34",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MTc0NQ==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3928",
+      "coverImage": "https://spyrealtors.in/projects/bptp-green-oaks-boulevard.jpg",
+      "summary": "Premium Premium Gated Plotted Floors & Suites by BPTP Limited in Sector 70A, Southern Peripheral Road, Gurugram. Key highlights: HRERA 2026 Verified, Gated Township Amenities, Ready Social Infrastructure.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Gated Township Amenities",
+        "Ready Social Infrastructure",
+        "High Rental Liquidity"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "tonino-lamborghini-residences",
+      "name": "Tonino Lamborghini Residences",
+      "developerId": "signature-global",
+      "locality": "Sector 71, Fazilpur Jharsa, SPR Corridor, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2033",
+      "configs": "Branded Italian Design Luxury Residences",
+      "sizeRange": "2,700 – 4,100 sq.ft.",
+      "priceRange": "₹ 5.5 Cr Onwards",
+      "rera": "GGM/1056/788/2026/28",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjE2MA==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3884",
+      "coverImage": "https://spyrealtors.in/projects/tonino-lamborghini-residences.jpg",
+      "summary": "Premium Branded Italian Design Luxury Residences by Signatureglobal (India) Limited in Sector 71, Fazilpur Jharsa, SPR Corridor, Gurugram. Key highlights: HRERA 2026 Verified, Branded Italian Lifestyle, SPR Expressway Hub.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Branded Italian Lifestyle",
+        "SPR Expressway Hub",
+        "Curated Lamborghini Interiors"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "dlf-privana-enclave",
+      "name": "DLF Privana Enclave",
+      "developerId": "dlf-limited",
+      "locality": "Sector 76/77, Southern Peripheral Road, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2033",
+      "configs": "4 BHK Ultra-Luxury High-Rise Sanctuary",
+      "sizeRange": "3,500 – 5,400 sq.ft.",
+      "priceRange": "₹ 6.9 Cr Onwards",
+      "rera": "GGM/1079/811/2026/51",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjI0NQ==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3954",
+      "coverImage": "https://spyrealtors.in/projects/dlf-privana-enclave.jpg",
+      "summary": "Premium 4 BHK Ultra-Luxury High-Rise Sanctuary by DLF Limited in Sector 76/77, Southern Peripheral Road, Gurugram. Key highlights: HRERA 2026 Verified, DLF Master Ecosystem, Aravalli Forest Frontage.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "DLF Master Ecosystem",
+        "Aravalli Forest Frontage",
+        "Pre-Launch Allocation"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "ats-triumph-villas",
+      "name": "ATS Triumph Villas",
+      "developerId": "greatvalue-hpl-infratech-ats",
+      "locality": "Sector 104, Village Dhanwapur, Dwarka Expressway",
+      "status": "Hot Launch",
+      "possession": "2031",
+      "configs": "Signature Luxury Villa Enclave",
+      "sizeRange": "3,150 – 4,500 sq.ft.",
+      "priceRange": "₹ 4.6 Cr Onwards",
+      "rera": "GGM/1051/783/2026/23",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MTU3MQ==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3879",
+      "coverImage": "https://spyrealtors.in/projects/ats-triumph-villas.jpg",
+      "summary": "Premium Signature Luxury Villa Enclave by Greatvalue HPL Infratech / ATS in Sector 104, Village Dhanwapur, Dwarka Expressway. Key highlights: HRERA 2026 Verified, Limited Edition Villas, Italian Marble Flooring.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Limited Edition Villas",
+        "Italian Marble Flooring",
+        "Private Lawn & Plunge Pool"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "aquaria-at-aipl-lake-city",
+      "name": "Aquaria at AIPL Lake City",
+      "developerId": "floralessence-projects-aipl",
+      "locality": "Sector 103, Village Daulatabad, Dwarka Expressway",
+      "status": "Hot Launch",
+      "possession": "2031",
+      "configs": "3 & 4 BHK Lakefront Luxury Condominiums",
+      "sizeRange": "2,100 – 3,250 sq.ft.",
+      "priceRange": "₹ 3.1 Cr Onwards",
+      "rera": "GM/1063/795/2026/35",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MTM5NQ==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3929",
+      "coverImage": "https://spyrealtors.in/projects/aquaria-aipl-lake-city.jpg",
+      "summary": "Premium 3 & 4 BHK Lakefront Luxury Condominiums by Floralessence Projects / AIPL in Sector 103, Village Daulatabad, Dwarka Expressway. Key highlights: HRERA 2026 Verified, Man-Made Lake Living, Floating Boardwalks.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Man-Made Lake Living",
+        "Floating Boardwalks",
+        "Expressway Corridor Access"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "m3m-capital-financial-centre",
+      "name": "M3M Capital Financial Centre",
+      "developerId": "m3m-india",
+      "locality": "Sector 113, Dwarka Expressway (Smart City Delhi Airport)",
+      "status": "Hot Launch",
+      "possession": "2033",
+      "configs": "Commercial Hub & Premium Executive Suites",
+      "sizeRange": "850 – 2,200 sq.ft.",
+      "priceRange": "₹ 1.75 Cr Onwards",
+      "rera": "GGM/1077/809/2026/49",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjIxMw==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3951",
+      "coverImage": "https://spyrealtors.in/projects/m3m-capital-financial-centre.jpg",
+      "summary": "Premium Commercial Hub & Premium Executive Suites by Union Buildmart / M3M India in Sector 113, Dwarka Expressway (Smart City Delhi Airport). Key highlights: HRERA 2026 Verified, High Rental Yield Asset, Diplomatic Enclave II Frontage.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "High Rental Yield Asset",
+        "Diplomatic Enclave II Frontage",
+        "Grade-A Retail & Workspaces"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "krisumi-city-phase-7",
+      "name": "Krisumi City Phase 7",
+      "developerId": "krisumi-corporation-pvt-ltd-sumitomo-japan",
+      "locality": "Sector 36A, CPR / Dwarka Expressway, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2036",
+      "configs": "Indo-Japanese Luxury Suites & Residences",
+      "sizeRange": "1,950 – 2,900 sq.ft.",
+      "priceRange": "₹ 3.8 Cr Onwards",
+      "rera": "GGM/1066/798/2026/38",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjIyMA==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3935",
+      "coverImage": "https://spyrealtors.in/projects/krisumi-city-phase-7.jpg",
+      "summary": "Premium Indo-Japanese Luxury Suites & Residences by Krisumi Corporation Pvt. Ltd. (Sumitomo Japan) in Sector 36A, CPR / Dwarka Expressway, Gurugram. Key highlights: HRERA 2026 Verified, Japanese Onsen Spa, Nikken Sekkei Architecture.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Japanese Onsen Spa",
+        "Nikken Sekkei Architecture",
+        "Direct CPR Junction"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "the-marq",
+      "name": "The Marq",
+      "developerId": "adani-m2k-realtors-llp",
+      "locality": "Sector 102 & 102A, Dwarka Expressway, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2031",
+      "configs": "3 & 4 BHK Smart Green Homes",
+      "sizeRange": "2,050 – 3,100 sq.ft.",
+      "priceRange": "₹ 3.4 Cr Onwards",
+      "rera": "GGM/1042/774/2026/14",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjExNQ==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3870",
+      "coverImage": "https://spyrealtors.in/projects/the-marq.jpg",
+      "summary": "Premium 3 & 4 BHK Smart Green Homes by Adani M2K Realtors LLP in Sector 102 & 102A, Dwarka Expressway, Gurugram. Key highlights: HRERA 2026 Verified, Adani Global Engineering, AI Home Automation.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Adani Global Engineering",
+        "AI Home Automation",
+        "Central Park Proximity"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "puri-aerosphere",
+      "name": "Puri Aerosphere",
+      "developerId": "puri-construction-pvt-ltd",
+      "locality": "Sector 111, Dwarka Expressway (Delhi Border)",
+      "status": "Hot Launch",
+      "possession": "2033",
+      "configs": "3 & 4 BHK Aerotropolis Luxury Residences",
+      "sizeRange": "2,350 – 3,500 sq.ft.",
+      "priceRange": "₹ 4.1 Cr Onwards",
+      "rera": "GGM/1085/817/2026/57",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjI2OQ==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3977",
+      "coverImage": "https://spyrealtors.in/projects/puri-aerosphere.jpg",
+      "summary": "Premium 3 & 4 BHK Aerotropolis Luxury Residences by Puri Construction PVT LTD in Sector 111, Dwarka Expressway (Delhi Border). Key highlights: HRERA 2026 Verified, 0 KM Delhi Border, Direct IGI Airport Tunnel.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "0 KM Delhi Border",
+        "Direct IGI Airport Tunnel",
+        "7-Star Clubhouse"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "the-estate-one",
+      "name": "The Estate One",
+      "developerId": "anant-raj-limited",
+      "locality": "Sector 63A, Golf Course Extension, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2033",
+      "configs": "Exclusive Independent Luxury Floors & Villas",
+      "sizeRange": "2,100 – 3,200 sq.ft.",
+      "priceRange": "₹ 3.9 Cr Onwards",
+      "rera": "GGM/1084/816/2026/56",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjI1OA==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3975",
+      "coverImage": "https://spyrealtors.in/projects/the-estate-one.jpg",
+      "summary": "Premium Exclusive Independent Luxury Floors & Villas by Anant Raj Limited in Sector 63A, Golf Course Extension, Gurugram. Key highlights: HRERA 2026 Verified, Basement + Terrace Ownership, Elevated Green Canopy.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Basement + Terrace Ownership",
+        "Elevated Green Canopy",
+        "Private Gated Boulevard"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "marbella-terraces",
+      "name": "Marbella Terraces",
+      "developerId": "emaar-india-limited",
+      "locality": "Sector 66, Golf Course Extension Road, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2031",
+      "configs": "Spanish-Themed Luxury Terrace Homes",
+      "sizeRange": "3,100 – 4,800 sq.ft.",
+      "priceRange": "₹ 6.5 Cr Onwards",
+      "rera": "GM/1068/800/2026/40",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjIxMg==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3938",
+      "coverImage": "https://spyrealtors.in/projects/marbella-terraces.jpg",
+      "summary": "Premium Spanish-Themed Luxury Terrace Homes by Emaar India Limited in Sector 66, Golf Course Extension Road, Gurugram. Key highlights: HRERA 2026 Verified, Emaar Masterplan, Private Plunge Pools.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Emaar Masterplan",
+        "Private Plunge Pools",
+        "Direct Metro Access"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "sobha-crescent-phase-1",
+      "name": "Sobha Crescent Phase 1",
+      "developerId": "sobha-limited",
+      "locality": "Sector 63A, Gurugram Manesar Urban Complex",
+      "status": "Hot Launch",
+      "possession": "2033",
+      "configs": "3 & 4 BHK Architectural Masterpieces",
+      "sizeRange": "2,250 – 3,400 sq.ft.",
+      "priceRange": "₹ 4.8 Cr Onwards",
+      "rera": "GGM/1054/786/2026/26",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjE1MA==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3882",
+      "coverImage": "https://spyrealtors.in/projects/sobha-crescent-phase-1.jpg",
+      "summary": "Premium 3 & 4 BHK Architectural Masterpieces by Sobha Limited in Sector 63A, Gurugram Manesar Urban Complex. Key highlights: HRERA 2026 Verified, Sobha In-House Precision, German Architectural Finishes.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Sobha In-House Precision",
+        "German Architectural Finishes",
+        "Low Density Layout"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "godrej-verano",
+      "name": "Godrej Verano",
+      "developerId": "godrej-properties",
+      "locality": "Sector 63A, Golf Course Extension Road, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2031",
+      "configs": "3 & 4 BHK Sustainable Resort Condos",
+      "sizeRange": "2,400 – 3,600 sq.ft.",
+      "priceRange": "₹ 5.2 Cr Onwards",
+      "rera": "GGM/1081/813/2026/53",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjI1OA==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3971",
+      "coverImage": "https://spyrealtors.in/projects/godrej-verano.jpg",
+      "summary": "Premium 3 & 4 BHK Sustainable Resort Condos by Godrej Properties Limited in Sector 63A, Golf Course Extension Road, Gurugram. Key highlights: HRERA 2026 Verified, Sector 63A Prime Hub, Forest Trail Themed.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Sector 63A Prime Hub",
+        "Forest Trail Themed",
+        "IGBC Platinum Rated"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "three-sixty-north",
+      "name": "Three Sixty North",
+      "developerId": "oberoi-realty-limited",
+      "locality": "Sector 58, Golf Course Extension, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2033",
+      "configs": "4 BHK Ultra-Luxury High-Rise Enclave",
+      "sizeRange": "3,800 – 5,600 sq.ft.",
+      "priceRange": "₹ 9.5 Cr Onwards",
+      "rera": "GGM/1069/801/2026/41",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjIwMQ==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3940",
+      "coverImage": "https://spyrealtors.in/projects/three-sixty-north.jpg",
+      "summary": "Premium 4 BHK Ultra-Luxury High-Rise Enclave by Oberoi Realty Limited in Sector 58, Golf Course Extension, Gurugram. Key highlights: HRERA 2026 Verified, Oberoi Debut in NCR, Aravalli Ridge Views.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Oberoi Debut in NCR",
+        "Aravalli Ridge Views",
+        "Double Height Balconies"
+      ],
+      "activePartners": []
+    },
+    {
+      "id": "lodha-golf-course-road",
+      "name": "Lodha Golf Course Road",
+      "developerId": "lodha-developers-limited",
+      "locality": "Sector 28, Golf Course Road, Gurugram",
+      "status": "Hot Launch",
+      "possession": "2032",
+      "configs": "4 & 5 BHK Palatial Penthouses & Residences",
+      "sizeRange": "4,800 – 8,200 sq.ft.",
+      "priceRange": "₹ 14.5 Cr Onwards",
+      "rera": "GGM/1090/822/2026/62",
+      "reraCertificateUrl": "https://haryanarera.gov.in/view_project/view_certificate/MjI4Ng==",
+      "reraDetailsUrl": "https://haryanarera.gov.in/view_project/project_preview_open/3980",
+      "coverImage": "https://spyrealtors.in/projects/lodha-golf-course-road.jpg",
+      "summary": "Premium 4 & 5 BHK Palatial Penthouses & Residences by Lodha Developers Limited in Sector 28, Golf Course Road, Gurugram. Key highlights: HRERA 2026 Verified, Golf Course Road Frontage, Private Sky Deck.",
+      "highlights": [
+        "HRERA 2026 Verified",
+        "Golf Course Road Frontage",
+        "Private Sky Deck",
+        "Saint Amand Hospitality"
+      ],
       "activePartners": []
     }
   ]
