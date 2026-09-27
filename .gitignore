@@ -13,6 +13,8 @@ firebase-debug.*.log*
 # Local workspace configs
 .claude/
 *.bak
+__pycache__/
+*.pyc
 
 # Firebase config
 
