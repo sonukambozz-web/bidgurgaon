@@ -854,3 +854,257 @@ footer {
 .small-print { font-size: 12px; color: var(--muted); line-height: 1.6; margin-top: 10px; }
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ==========================================================================
+   HOW IT WORKS — STORYBOARD, SIMULATOR & COMPARISON STYLES
+   ========================================================================== */
+
+/* Hero Feature Badges */
+.hiw-hero-badges {
+  display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px;
+}
+.hiw-hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #FFFFFF; border: 1px solid var(--line); border-radius: 999px;
+  padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--paper-dim);
+  box-shadow: var(--shadow-sm);
+}
+.hiw-hero-badge span.icon { font-size: 15px; }
+
+/* Timeline Storyboard */
+.storyboard-wrap {
+  position: relative; margin: 40px 0;
+}
+.storyboard-timeline {
+  position: relative; display: flex; flex-direction: column; gap: 36px;
+}
+.storyboard-timeline::before {
+  content: ""; position: absolute; left: 27px; top: 20px; bottom: 20px;
+  width: 2px; background: linear-gradient(180deg, var(--gold) 0%, rgba(201, 168, 76, 0.2) 100%);
+}
+.storyboard-step {
+  display: grid; grid-template-columns: 56px 1fr 1.1fr; gap: 28px;
+  align-items: start; position: relative;
+}
+.storyboard-num {
+  width: 56px; height: 56px; border-radius: 50%; background: #FFFFFF;
+  border: 2px solid var(--gold); color: var(--gold-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 18px; font-weight: 800;
+  box-shadow: 0 4px 14px rgba(201, 168, 76, 0.2); z-index: 2;
+}
+.storyboard-content {
+  background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px;
+  padding: 28px; box-shadow: var(--shadow); position: relative;
+}
+.storyboard-phase {
+  font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold-dark); margin-bottom: 6px;
+}
+.storyboard-content h3 {
+  font-size: 20px; font-weight: 700; color: var(--ink); margin-bottom: 12px;
+}
+.storyboard-content p {
+  font-size: 14.5px; line-height: 1.7; color: var(--paper-dim); margin-bottom: 14px;
+}
+.storyboard-keypoint {
+  display: flex; align-items: flex-start; gap: 8px; font-size: 13px;
+  color: var(--slate); font-weight: 500; margin-top: 8px;
+}
+.storyboard-keypoint svg { color: var(--emerald-dark); flex-shrink: 0; margin-top: 2px; }
+
+/* Visual Diagram Card in Storyboard */
+.storyboard-visual {
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 16px;
+  padding: 24px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px;
+}
+.visual-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-bottom: 10px; border-bottom: 1px solid var(--line);
+  font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;
+}
+.visual-chip-tag {
+  background: var(--gold-soft); color: var(--gold-dark); border-radius: 6px;
+  padding: 3px 8px; font-size: 11px; font-weight: 700;
+}
+.visual-live-card {
+  background: #FFFFFF; border: 1px solid var(--gold-border); border-radius: 12px;
+  padding: 16px; box-shadow: 0 4px 12px rgba(201, 168, 76, 0.08);
+}
+.visual-live-title { font-size: 15px; font-weight: 800; color: var(--ink); margin-bottom: 4px; }
+.visual-live-meta { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+.visual-live-bid {
+  display: flex; justify-content: space-between; align-items: baseline;
+  background: var(--bg-soft); border-radius: 8px; padding: 10px 12px;
+}
+.visual-live-val { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--gold-dark); }
+.visual-live-sub { font-size: 11px; color: var(--muted); }
+
+/* Interactive Simulator */
+.simulator-box {
+  background: #FFFFFF; border: 1px solid var(--gold-border); border-radius: 20px;
+  padding: 36px; box-shadow: var(--shadow-gold), var(--shadow-lg); margin-top: 24px;
+  position: relative; overflow: hidden;
+}
+.simulator-box::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(90deg, var(--gold) 0%, #D4AF37 50%, var(--emerald) 100%);
+}
+.sim-nav {
+  display: flex; background: var(--bg-soft); border-radius: 10px; padding: 4px;
+  max-width: 440px; margin-bottom: 28px; border: 1px solid var(--line);
+}
+.sim-tab {
+  flex: 1; text-align: center; padding: 10px 16px; font-size: 13.5px; font-weight: 700;
+  border-radius: 8px; border: none; background: transparent; cursor: pointer;
+  color: var(--slate); transition: all 0.2s;
+}
+.sim-tab.active {
+  background: #FFFFFF; color: var(--ink); box-shadow: var(--shadow-sm);
+}
+.sim-layout {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: stretch;
+}
+.sim-controls {
+  display: flex; flex-direction: column; gap: 20px;
+}
+.sim-group {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.sim-label {
+  font-size: 13px; font-weight: 700; color: var(--ink); display: flex; justify-content: space-between;
+}
+.sim-benchmark-badge {
+  font-size: 12px; font-weight: 600; color: var(--gold-dark);
+}
+.sim-range {
+  width: 100%; accent-color: var(--gold-dark); cursor: pointer; height: 6px;
+}
+.sim-options-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+}
+.sim-opt-btn {
+  background: #FFFFFF; border: 1.5px solid var(--line); border-radius: 10px;
+  padding: 12px 10px; text-align: center; cursor: pointer; transition: all 0.15s;
+}
+.sim-opt-btn:hover { border-color: var(--gold); }
+.sim-opt-btn.selected {
+  border-color: var(--gold); background: var(--gold-soft); color: var(--ink);
+}
+.sim-opt-btn .rank-tag { font-family: var(--font-display); font-size: 14px; font-weight: 800; display: block; }
+.sim-opt-btn .desc-tag { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* Simulator Output Screen */
+.sim-output-screen {
+  background: linear-gradient(145deg, #0B0F19 0%, #172033 100%);
+  border-radius: 16px; padding: 28px; color: #FFFFFF;
+  display: flex; flex-direction: column; justify-content: space-between;
+  box-shadow: 0 12px 30px rgba(11, 15, 25, 0.2);
+}
+.sim-out-head {
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12); padding-bottom: 14px;
+}
+.sim-out-badge {
+  font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gold);
+}
+.sim-status-pill {
+  background: rgba(16, 185, 129, 0.2); color: #34D399; font-size: 11.5px;
+  font-weight: 700; padding: 3px 10px; border-radius: 999px;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+}
+.sim-live-row-mockup {
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 12px; padding: 18px; margin: 20px 0;
+}
+.mockup-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.mockup-num {
+  font-family: var(--font-display); font-size: 20px; font-weight: 900; color: var(--gold);
+}
+.mockup-name { font-size: 15px; font-weight: 800; color: #FFFFFF; }
+.mockup-cost {
+  display: flex; justify-content: space-between; align-items: baseline;
+  background: rgba(0, 0, 0, 0.3); border-radius: 8px; padding: 10px 14px;
+}
+.mockup-cost-num {
+  font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #FBBF24;
+}
+.mockup-daily { font-size: 12px; color: #94A3B8; }
+.sim-out-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 14px;
+}
+.sim-out-stat-label { font-size: 11.5px; color: #94A3B8; text-transform: uppercase; }
+.sim-out-stat-val { font-size: 14px; font-weight: 700; color: #FFFFFF; margin-top: 3px; }
+
+/* Comparison Matrix */
+.comp-table-wrap {
+  background: #FFFFFF; border: 1px solid var(--line); border-radius: 20px;
+  overflow: hidden; box-shadow: var(--shadow); margin-top: 28px;
+}
+.comp-table {
+  width: 100%; border-collapse: collapse; text-align: left;
+}
+.comp-table th, .comp-table td {
+  padding: 18px 24px; border-bottom: 1px solid var(--line);
+}
+.comp-table th {
+  background: var(--bg-soft); font-size: 13.5px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink);
+}
+.comp-table th.col-bid {
+  background: var(--gold-bg); color: var(--gold-dark); border-bottom: 2px solid var(--gold);
+}
+.comp-table td.col-bid {
+  background: rgba(201, 168, 76, 0.03); font-weight: 600; color: var(--ink);
+}
+.comp-table tr:last-child td { border-bottom: none; }
+.comp-feature {
+  font-weight: 700; color: var(--ink); font-size: 14.5px;
+}
+.comp-desc {
+  font-size: 12.5px; color: var(--muted); font-weight: 400; margin-top: 3px;
+}
+.comp-neg {
+  display: flex; align-items: flex-start; gap: 8px; font-size: 13.5px; color: #991B1B;
+}
+.comp-pos {
+  display: flex; align-items: flex-start; gap: 8px; font-size: 13.5px; color: var(--emerald-dark);
+}
+
+/* FAQ Accordion */
+.faq-grid {
+  display: flex; flex-direction: column; gap: 14px; margin-top: 28px;
+}
+.faq-item {
+  background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px;
+  overflow: hidden; transition: all 0.2s ease;
+}
+.faq-item:hover { border-color: var(--line-bright); }
+.faq-question {
+  width: 100%; text-align: left; padding: 20px 24px; background: none; border: none;
+  font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--ink);
+  cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+.faq-question::after {
+  content: "+"; font-size: 22px; font-weight: 400; color: var(--gold-dark); transition: transform 0.2s;
+}
+.faq-item.is-open .faq-question::after {
+  content: "−"; transform: rotate(180deg);
+}
+.faq-answer {
+  display: none; padding: 0 24px 22px; font-size: 14.5px; line-height: 1.7; color: var(--paper-dim);
+}
+.faq-item.is-open .faq-answer { display: block; }
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .storyboard-timeline::before { left: 23px; }
+  .storyboard-step { grid-template-columns: 46px 1fr; gap: 16px; }
+  .storyboard-num { width: 46px; height: 46px; font-size: 16px; }
+  .storyboard-visual { grid-column: 2; margin-top: 10px; }
+  .sim-layout { grid-template-columns: 1fr; }
+  .comp-table { display: block; overflow-x: auto; }
+}
+
