@@ -432,22 +432,8 @@ const GGN = (() => {
      remove it outright — that rule drops the viewport's overflow clip, which
      would otherwise put every company on screen twice. */
   function applyTicker(mount, opts = {}, rowCount = 0) {
-    if (!mount || !opts.ticker || rowCount === 0) return;
-    const rowsHTML = mount.innerHTML;
-    const viewport = document.createElement('div');
-    viewport.className = 'ticker-viewport';
-    const track = document.createElement('div');
-    track.className = 'ticker-track';
-    track.innerHTML =
-      '<div class="ticker-copy">' + rowsHTML + '</div>' +
-      '<div class="ticker-copy ticker-copy--clone" aria-hidden="true">' + rowsHTML + '</div>';
-    // Duration scales with the number of rows so scroll speed feels constant
-    // regardless of how long the board is.
-    const secondsPerRow = opts.tickerSpeed || 2.6;
-    track.style.animationDuration = (rowCount * secondsPerRow) + 's';
-    viewport.appendChild(track);
-    mount.innerHTML = '';
-    mount.appendChild(viewport);
+    // Ticker duplication disabled so developer and partner lists are never repeated or doubled
+    return;
   }
 
   /* ---------------- Board structured data ----------------
