@@ -241,16 +241,96 @@ def sync_projects(dry_run=True):
             json.dump(data, f, indent=2, ensure_ascii=False)
         print("Updated data.json successfully!")
 
-        print("\nRegenerating static HTML pages via generate.py...")
-        ret = os.system(f'python "{os.path.join(os.path.dirname(os.path.abspath(__file__)), "generate.py")}"')
-        if ret == 0:
-            print("Static page generation complete!")
-        else:
-            print(f"generate.py exited with code: {ret}")
-    else:
-        print("\nTo apply these changes, run:")
-        print("    python sync_notion.py --apply")
+def get_firebase_token():
+    config_path = os.path.expanduser("~/.config/configstore/firebase-tools.json")
+    if os.path.exists(config_path):
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                d = json.load(f)
+            return d.get("tokens", {}).get("access_token")
+        except Exception as e:
+            print("Error loading firebase token:", e)
+    return None
+
+def to_firestore_value(val):
+    if val is None:
+        return {"nullValue": None}
+    elif isinstance(val, bool):
+        return {"booleanValue": val}
+    elif isinstance(val, int):
+        return {"integerValue": str(val)}
+    elif isinstance(val, float):
+        return {"doubleValue": val}
+    elif isinstance(val, str):
+        return {"stringValue": val}
+    elif isinstance(val, list):
+        return {"arrayValue": {"values": [to_firestore_value(x) for x in val]}}
+    elif isinstance(val, dict):
+        return {"mapValue": {"fields": {k: to_firestore_value(v) for k, v in val.items()}}}
+    return {"stringValue": str(val)}
+
+def upload_to_firestore(collection, doc_id, data_dict, token, project_id="bidgurgaon"):
+    url = f"https://firestore.googleapis.com/v1/projects/{project_id}/databases/(default)/documents/{collection}/{doc_id}"
+    fields = {k: to_firestore_value(v) for k, v in data_dict.items() if v is not None}
+    payload = json.dumps({"fields": fields}).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {token}"
+        },
+        method="PATCH"
+    )
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        return resp.status
+
+def sync_all_to_firestore():
+    token = get_firebase_token()
+    if not token:
+        print("[ERROR] Firebase CLI token not found. Please run 'firebase login'.")
+        return
+
+    data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")
+    with open(data_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    projects = data.get("projects", [])
+    developers = data.get("developers", [])
+    print(f"\nUploading {len(projects)} projects and {len(developers)} developers to Firestore ('bidgurgaon')...")
+
+    success_proj = 0
+    for p in projects:
+        p_id = p.get("id")
+        if not p_id:
+            continue
+        try:
+            upload_to_firestore("projects", p_id, p, token)
+            success_proj += 1
+            print(f"  [FIRESTORE] Project '{p.get('name')}' ({p_id}) uploaded.")
+        except Exception as e:
+            print(f"  [ERROR] Project '{p_id}': {e}")
+
+    success_dev = 0
+    for d in developers:
+        d_id = d.get("id")
+        if not d_id:
+            continue
+        try:
+            upload_to_firestore("developers", d_id, d, token)
+            success_dev += 1
+            print(f"  [FIRESTORE] Developer '{d.get('name')}' ({d_id}) uploaded.")
+        except Exception as e:
+            print(f"  [ERROR] Developer '{d_id}': {e}")
+
+    print(f"\nFirestore Sync Complete! Successfully uploaded {success_proj} projects and {success_dev} developers.")
 
 if __name__ == "__main__":
-    dry_run = "--apply" not in sys.argv
-    sync_projects(dry_run=dry_run)
+    import sys
+    if "--firestore-only" in sys.argv:
+        sync_all_to_firestore()
+    else:
+        dry_run = "--apply" not in sys.argv
+        sync_projects(dry_run=dry_run)
+        if not dry_run or "--firestore" in sys.argv:
+            sync_all_to_firestore()
