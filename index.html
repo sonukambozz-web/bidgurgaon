@@ -493,70 +493,7 @@ a { color: inherit; text-decoration: none; }
 .outbid-box p { color: var(--slate); font-size: 14.5px; max-width: 68ch; }
 .outbid-box b { color: var(--ink); }
 
-/* ---- SPY REALTORS SPOTLIGHT BANNER ---- */
-.spy-spotlight {
-  margin: 36px 0 10px;
-  background: linear-gradient(135deg, #0B0F19 0%, #161F33 100%);
-  border-radius: var(--radius-lg); padding: 32px 36px;
-  color: #FFFFFF; position: relative; overflow: hidden;
-  box-shadow: 0 12px 36px rgba(11, 15, 25, 0.16);
-  border: 1px solid rgba(201, 168, 76, 0.35);
-}
-.spy-spotlight::before {
-  content: ''; position: absolute; top: -100px; right: -80px; width: 320px; height: 320px;
-  background: radial-gradient(circle, rgba(201, 168, 76, 0.22) 0%, transparent 70%);
-  pointer-events: none;
-}
-.spy-grid {
-  display: grid; grid-template-columns: auto 1fr auto;
-  align-items: center; gap: 26px;
-}
-.spy-logo-wrap {
-  width: 72px; height: 72px; border-radius: 16px;
-  background: #0A071B; border: 1.5px solid var(--gold);
-  display: grid; place-items: center; padding: 10px;
-  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.2);
-}
-.spy-logo-wrap img { width: 100%; height: 100%; object-fit: contain; }
-.spy-content h3 {
-  font-family: var(--font-display); font-size: 22px; font-weight: 800;
-  letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-}
-.spy-badge {
-  font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
-  background: linear-gradient(135deg, #C9A84C 0%, #B8860B 100%); color: #000;
-  padding: 3px 10px; border-radius: 999px;
-}
-.spy-slogan {
-  font-size: 13.5px; color: #E2E8F0; margin-top: 4px;
-}
-.spy-specs {
-  display: flex; gap: 16px; margin-top: 10px; font-size: 12.5px; color: #94A3B8; flex-wrap: wrap;
-}
-.spy-specs span { display: inline-flex; align-items: center; gap: 5px; }
-.spy-actions {
-  display: flex; gap: 10px; flex-direction: column; min-width: 170px;
-}
-.btn-spy-call {
-  background: var(--gold); color: #0A071B; font-weight: 800;
-  border-radius: 12px; height: 44px; display: inline-flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.3); transition: all 0.2s ease;
-}
-.btn-spy-call:hover {
-  background: #D4AF37; transform: translateY(-1px);
-}
-.btn-spy-wa {
-  background: rgba(255, 255, 255, 0.1); color: #FFFFFF; font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; height: 40px;
-  display: inline-flex; align-items: center; justify-content: center; transition: all 0.2s ease;
-}
-.btn-spy-wa:hover {
-  background: rgba(255, 255, 255, 0.18);
-}
-@media (max-width: 860px) {
-  .spy-grid { grid-template-columns: 1fr; gap: 18px; text-align: left; }
-  .spy-actions { flex-direction: row; }
-}
+
 
 /* ---- Curated Projects Showcase (Below the Board) ---- */
 .section-projects {
@@ -884,8 +821,8 @@ footer {
         <div class="tick-l">Verified 2026 Launches</div>
       </div>
       <div class="tick">
-        <div class="tick-n">SPY Realtors</div>
-        <div class="tick-l">#1 Channel Partner</div>
+        <div class="tick-n">100%</div>
+        <div class="tick-l">HRERA Certified</div>
       </div>
     </div>
   </div>
@@ -933,31 +870,6 @@ footer {
       <a href="pages/for-developers.html" class="btn btn-primary btn-sm">Take / Outbid Position</a>
     </div>
 
-    <!-- ============ SPY REALTORS SPOTLIGHT BANNER ============ -->
-    <div class="spy-spotlight">
-      <div class="spy-grid">
-        <div class="spy-logo-wrap">
-          <img src="img/spy-realtors.svg" alt="SPY Realtors Logo" onerror="this.src='https://spyrealtors.in/favicon.svg'">
-        </div>
-        <div class="spy-content">
-          <h3>
-            SPY Realtors
-            <span class="spy-badge">#1 Official Channel Partner</span>
-          </h3>
-          <p class="spy-slogan">"Reality. Reliability. Results." — Global NRI Investment Specialists &amp; Luxury Advisory</p>
-          <div class="spy-specs">
-            <span>🛡️ HRERA Certified (PKL-GGM-1288-2024)</span>
-            <span>🌐 Serving NRIs Across 12+ Countries</span>
-            <span>📑 FEMA &amp; Remote Buying Compliance</span>
-            <span>⭐ Active on All 20 Verified Launches</span>
-          </div>
-        </div>
-        <div class="spy-actions">
-          <a href="tel:+917669766992" class="btn-spy-call">📞 Call +91 76697 66992</a>
-          <a href="https://wa.me/917669766992" class="btn-spy-wa" target="_blank" rel="noopener">WhatsApp Advisory</a>
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -1442,7 +1354,6 @@ footer {
       + '<div class="proj-media">'
         + '<span class="proj-status">' + esc(status) + '</span>'
         + '<span class="proj-rera">HRERA ✓</span>'
-        + '<span class="proj-partner-pill"><span>⭐</span> SPY Realtors</span>'
         + projShot(imgUrl, '', p.name)
       + '</div>'
       + '<div class="proj-body">'
